@@ -4,6 +4,7 @@ package com.ehsanmashhadi.library;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.res.Configuration;
+import android.view.LayoutInflater;
 import android.view.View;
 
 import com.google.gson.Gson;
@@ -20,6 +21,7 @@ import java.util.List;
 import java.util.Locale;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -32,7 +34,10 @@ public class CountryPicker {
     private List<Country> mCountries;
     private Locale mLocale;
     private RecyclerView mRecyclerView;
+    private SearchView mSearchViewCountry;
+
     private RecyclerViewAdapter.OnCountryClickListener mOnCountryClickListener;
+    private View mView;
 
     private CountryPicker() {
 
@@ -40,15 +45,68 @@ public class CountryPicker {
 
     public CountryPicker(Builder builder) {
 
+        initAttributes(builder);
+        initView();
+        initLocale();
+        initCountries();
+        sort();
+        initSearchView();
+    }
+
+    private void initAttributes(Builder builder) {
+
         mShowingFlag = builder.mShowingFlag;
         mSort = builder.mSort;
         mEnablingSearch = builder.mEnablingSearch;
         mOnCountryClickListener = builder.mOnCountryClickListener;
         mLocale = builder.mLocale;
         mContext = builder.mContext;
-        initLocale();
-        initCountries();
-        sort();
+    }
+
+    private void initView() {
+
+        LayoutInflater layoutInflater = LayoutInflater.from(mContext);
+        mView = layoutInflater.inflate(R.layout.layout_countrypicker, null);
+    }
+
+    private void initSearchView() {
+
+        mSearchViewCountry = mView.findViewById(R.id.searchview_country);
+
+        if (mEnablingSearch) {
+            mSearchViewCountry.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                @Override
+                public boolean onQueryTextSubmit(String query) {
+
+                    return false;
+                }
+
+                @Override
+                public boolean onQueryTextChange(String newText) {
+
+                    filterSearch(newText);
+                    return true;
+                }
+            });
+        } else {
+            mSearchViewCountry.setVisibility(View.GONE);
+        }
+
+
+    }
+
+    private void filterSearch(String query) {
+
+        List<Country> filteredCountries = new ArrayList<>();
+
+        for (Country country : mCountries) {
+            if (country.getName().contains(query)) {
+                filteredCountries.add(country);
+            }
+        }
+
+        ((RecyclerViewAdapter) mRecyclerView.getAdapter()).setCountries(filteredCountries);
+
     }
 
 
@@ -79,19 +137,19 @@ public class CountryPicker {
 
     public void show(AppCompatActivity activity) {
 
-        Dialog dialog = new Dialog(activity);
-        View view = activity.getLayoutInflater().inflate(R.layout.layout_countrypicker, null);
-        mRecyclerView = view.findViewById(R.id.recyclerview_countries);
+        Dialog dialog = new Dialog(activity, R.style.DialogStyle);
+        mRecyclerView = mView.findViewById(R.id.recyclerview_countries);
         RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(mCountries);
 
         if (mOnCountryClickListener != null)
             recyclerViewAdapter.setListener(mOnCountryClickListener);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(activity);
+        mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setAdapter(recyclerViewAdapter);
         mRecyclerView.setLayoutManager(layoutManager);
 
-        dialog.setContentView(view);
+        dialog.setContentView(mView);
         dialog.show();
     }
 
@@ -167,7 +225,6 @@ public class CountryPicker {
             return new CountryPicker(this);
         }
     }
-
 
     public enum Sort {
         NONE,

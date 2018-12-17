@@ -53,6 +53,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return mCountryList.size();
     }
 
+    public void setCountries(List<Country> countries) {
+
+        mCountryList = countries;
+        notifyDataSetChanged();
+    }
+
     static class CountryHolder extends RecyclerView.ViewHolder {
 
         private interface OnItemClickListener {

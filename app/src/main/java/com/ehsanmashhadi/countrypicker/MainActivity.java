@@ -1,12 +1,9 @@
 package com.ehsanmashhadi.countrypicker;
 
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.widget.Toast;
 
 import com.ehsanmashhadi.library.CountryPicker;
-
-import java.util.Locale;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,8 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-
-        CountryPicker countryPicker = new CountryPicker.Builder(this).sortBy(CountryPicker.Sort.NONE).setListener(country ->
+        CountryPicker countryPicker = new CountryPicker.Builder(this).sortBy(CountryPicker.Sort.NONE).enablingSearch(true).setListener(country ->
                 Toast.makeText(this, country.getName(), Toast.LENGTH_LONG).show()).build();
         countryPicker.show(this);
 

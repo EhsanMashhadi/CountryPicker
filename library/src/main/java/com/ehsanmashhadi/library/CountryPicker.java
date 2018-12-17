@@ -22,6 +22,7 @@ import java.util.Locale;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -32,9 +33,11 @@ public class CountryPicker {
     private boolean mEnablingSearch;
     private Context mContext;
     private List<Country> mCountries;
+    private List<String> mExceptCountriesName;
     private Locale mLocale;
     private RecyclerView mRecyclerView;
     private SearchView mSearchViewCountry;
+    private int mStyle;
 
     private RecyclerViewAdapter.OnCountryClickListener mOnCountryClickListener;
     private View mView;
@@ -61,6 +64,11 @@ public class CountryPicker {
         mOnCountryClickListener = builder.mOnCountryClickListener;
         mLocale = builder.mLocale;
         mContext = builder.mContext;
+        mExceptCountriesName = builder.mExceptCountries;
+        mStyle = builder.mStyle;
+        if (mStyle == 0) {
+            mStyle = R.style.CountryPickerLightStyle;
+        }
     }
 
     private void initView() {
@@ -91,22 +99,17 @@ public class CountryPicker {
         } else {
             mSearchViewCountry.setVisibility(View.GONE);
         }
-
-
     }
 
     private void filterSearch(String query) {
 
         List<Country> filteredCountries = new ArrayList<>();
-
         for (Country country : mCountries) {
             if (country.getName().contains(query)) {
                 filteredCountries.add(country);
             }
         }
-
         ((RecyclerViewAdapter) mRecyclerView.getAdapter()).setCountries(filteredCountries);
-
     }
 
 
@@ -122,6 +125,7 @@ public class CountryPicker {
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
+        exceptCountriesByName(mExceptCountriesName);
     }
 
     private void initLocale() {
@@ -137,9 +141,11 @@ public class CountryPicker {
 
     public void show(AppCompatActivity activity) {
 
-        Dialog dialog = new Dialog(activity, R.style.DialogStyle);
+        Dialog dialog = new Dialog(activity, R.style.CountryPickerDarkStyle);
         mRecyclerView = mView.findViewById(R.id.recyclerview_countries);
-        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(mCountries);
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(activity, DividerItemDecoration.VERTICAL));
+
+        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(mCountries, mStyle);
 
         if (mOnCountryClickListener != null)
             recyclerViewAdapter.setListener(mOnCountryClickListener);
@@ -148,7 +154,6 @@ public class CountryPicker {
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setAdapter(recyclerViewAdapter);
         mRecyclerView.setLayoutManager(layoutManager);
-
         dialog.setContentView(mView);
         dialog.show();
     }
@@ -158,23 +163,31 @@ public class CountryPicker {
         switch (mSort) {
 
             case CODE: {
-
                 Comparator<Country> comparator = (country1, country2) -> country1.getCode().compareTo(country2.getCode());
-
                 Collections.sort(mCountries, comparator);
                 break;
             }
 
             case COUNTRY: {
-
                 Comparator<Country> comparator = (country1, country2) -> country1.getName().compareTo(country2.getName());
-
                 Collections.sort(mCountries, comparator);
                 break;
             }
         }
     }
 
+    private void exceptCountriesByName(List<String> countriesName) {
+
+        if (mExceptCountriesName != null)
+            for (String countryName : countriesName) {
+                for (Country country : mCountries) {
+                    if (country.getName().toLowerCase().equals(countryName.toLowerCase())) {
+                        mCountries.remove(country);
+                        break;
+                    }
+                }
+            }
+    }
 
     public static class Builder {
 
@@ -184,6 +197,8 @@ public class CountryPicker {
         private RecyclerViewAdapter.OnCountryClickListener mOnCountryClickListener;
         private Context mContext;
         private Locale mLocale;
+        private List<String> mExceptCountries;
+        private int mStyle;
 
         public Builder(Context context) {
 
@@ -193,6 +208,12 @@ public class CountryPicker {
         public Builder sortBy(Sort sort) {
 
             mSort = sort;
+            return this;
+        }
+
+        public Builder setStyle(int style) {
+
+            mStyle = style;
             return this;
         }
 
@@ -217,6 +238,12 @@ public class CountryPicker {
         public Builder setLocale(Locale locale) {
 
             mLocale = locale;
+            return this;
+        }
+
+        public Builder exceptCountriesName(List<String> countriesName) {
+
+            mExceptCountries = countriesName;
             return this;
         }
 

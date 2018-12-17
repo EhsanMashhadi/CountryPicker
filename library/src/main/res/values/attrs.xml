@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CountryPickerStyleable">
+        <attr name="countryNameColor" format="reference"/>
+        <attr name="dialCodeColor" format="reference"/>
+        <attr name="rowBackgroundColor" format="reference"/>
+    </declare-styleable>
+</resources>

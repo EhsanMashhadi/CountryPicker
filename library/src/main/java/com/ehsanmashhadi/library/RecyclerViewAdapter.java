@@ -1,5 +1,7 @@
 package com.ehsanmashhadi.library;
 
+import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +11,8 @@ import android.widget.TextView;
 import java.util.List;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.StyleRes;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.CountryHolder> {
@@ -19,10 +23,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     private List<Country> mCountryList;
     private OnCountryClickListener mOnCountryClickListener;
+    private static int sStyle;
 
-    RecyclerViewAdapter(List<Country> countryList) {
+    RecyclerViewAdapter(List<Country> countryList, @StyleRes int style) {
 
         mCountryList = countryList;
+        sStyle = style;
     }
 
     public void setListener(OnCountryClickListener onCountryClickListener) {
@@ -72,9 +78,21 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         CountryHolder(@NonNull View itemView, final OnItemClickListener onItemClickListener) {
 
             super(itemView);
+
+            TypedArray typedArray = itemView.getContext().obtainStyledAttributes(sStyle, R.styleable.CountryPickerStyleable);
+
+            int rowBackgroundColor = typedArray.getResourceId(R.styleable.CountryPickerStyleable_rowBackgroundColor, Color.WHITE);
+            int countryNameColor = typedArray.getResourceId(R.styleable.CountryPickerStyleable_countryNameColor, Color.BLACK);
+            int dialCodeColor = typedArray.getResourceId(R.styleable.CountryPickerStyleable_dialCodeColor, Color.BLACK);
+
             mTextViewName = itemView.findViewById(R.id.textview_name);
             mTextViewCode = itemView.findViewById(R.id.textview_code);
             mImageViewFlag = itemView.findViewById(R.id.imageview_flag);
+
+            mTextViewName.setTextColor(ContextCompat.getColor(itemView.getContext(), countryNameColor));
+            mTextViewCode.setTextColor(ContextCompat.getColor(itemView.getContext(), dialCodeColor));
+            itemView.setBackgroundColor(ContextCompat.getColor(itemView.getContext(), rowBackgroundColor));
+
             itemView.setOnClickListener(v -> onItemClickListener.onItemSelected(getAdapterPosition()));
 
         }

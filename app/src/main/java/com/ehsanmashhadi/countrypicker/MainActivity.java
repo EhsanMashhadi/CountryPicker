@@ -19,12 +19,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         List<String> list = new ArrayList<>();
+        list.add("afghanistan");
+        list.add("ALBANIA");
+        list.add("ALgERia");
 
-        CountryPicker countryPicker = new CountryPicker.Builder(this).setStyle(R.style.CountryPickerDarkStyle).exceptCountriesName(list)
-                .sortBy(CountryPicker.Sort.NONE).enablingSearch(true).setListener(country ->
+        CountryPicker countryPicker = new CountryPicker.Builder(this).setStyle(R.style.CountryPickerLightStyle).exceptCountriesName(list)
+                .sortBy(CountryPicker.Sort.NONE).setViewType(CountryPicker.ViewType.BOTTOMSHEET).enablingSearch(true).setListener(country ->
                         Toast.makeText(this, country.getName(), Toast.LENGTH_LONG).show()).build();
         countryPicker.show(this);
 
-
     }
+
 }

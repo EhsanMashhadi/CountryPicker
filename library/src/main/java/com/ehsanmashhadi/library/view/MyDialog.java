@@ -1,4 +1,4 @@
-package com.ehsanmashhadi.library;
+package com.ehsanmashhadi.library.view;
 
 import android.content.Context;
 import android.view.View;

@@ -1,10 +1,16 @@
-package com.ehsanmashhadi.library;
+package com.ehsanmashhadi.library.view;
 
 
 import android.content.Context;
 import android.content.res.Configuration;
 import android.view.LayoutInflater;
 import android.view.View;
+
+import com.ehsanmashhadi.library.R;
+import com.ehsanmashhadi.library.model.Country;
+import com.ehsanmashhadi.library.presenter.CountryPickerContractor;
+import com.ehsanmashhadi.library.presenter.CountryPickerPresenter;
+import com.ehsanmashhadi.library.repository.ResourceCountryRepository;
 
 import java.util.List;
 import java.util.Locale;

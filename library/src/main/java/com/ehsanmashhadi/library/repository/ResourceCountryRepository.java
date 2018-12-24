@@ -1,7 +1,9 @@
-package com.ehsanmashhadi.library;
+package com.ehsanmashhadi.library.repository;
 
 import android.content.res.Resources;
 
+import com.ehsanmashhadi.library.R;
+import com.ehsanmashhadi.library.model.Country;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -11,11 +13,11 @@ import java.io.Reader;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 
-class ResourceCountryRepository implements ICountryRepository {
+public class ResourceCountryRepository implements ICountryRepository {
 
     private Resources mResources;
 
-    ResourceCountryRepository(Resources resources) {
+    public ResourceCountryRepository(Resources resources) {
 
         mResources = resources;
     }

@@ -1,4 +1,4 @@
-package com.ehsanmashhadi.library;
+package com.ehsanmashhadi.library.model;
 
 import com.google.gson.annotations.SerializedName;
 

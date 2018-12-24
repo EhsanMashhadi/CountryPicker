@@ -1,17 +1,20 @@
-package com.ehsanmashhadi.library;
+package com.ehsanmashhadi.library.presenter;
+
+import com.ehsanmashhadi.library.repository.ICountryRepository;
+import com.ehsanmashhadi.library.view.CountryPicker;
+import com.ehsanmashhadi.library.model.Country;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-class CountryPickerPresenter implements CountryPickerContractor.Presenter {
-
+public class CountryPickerPresenter implements CountryPickerContractor.Presenter {
     private CountryPickerContractor.View mView;
     private ICountryRepository mICountryRepository;
     private List<Country> mCountries;
 
-    CountryPickerPresenter(ICountryRepository iCountryRepository, CountryPickerContractor.View view) {
+    public CountryPickerPresenter(ICountryRepository iCountryRepository, CountryPickerContractor.View view) {
 
         mICountryRepository = iCountryRepository;
         mView = view;

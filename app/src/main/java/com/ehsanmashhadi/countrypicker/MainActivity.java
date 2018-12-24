@@ -3,7 +3,7 @@ package com.ehsanmashhadi.countrypicker;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.ehsanmashhadi.library.CountryPicker;
+import com.ehsanmashhadi.library.view.CountryPicker;
 
 import java.util.ArrayList;
 import java.util.List;

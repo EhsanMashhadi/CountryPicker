@@ -1,9 +1,12 @@
-package com.ehsanmashhadi.library;
+package com.ehsanmashhadi.library.presenter;
 
+
+import com.ehsanmashhadi.library.view.CountryPicker;
+import com.ehsanmashhadi.library.model.Country;
 
 import java.util.List;
 
-interface CountryPickerContractor {
+public interface CountryPickerContractor {
 
     interface View {
 

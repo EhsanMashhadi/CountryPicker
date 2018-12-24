@@ -1,4 +1,4 @@
-package com.ehsanmashhadi.library;
+package com.ehsanmashhadi.library.view;
 
 import android.content.res.TypedArray;
 import android.graphics.Color;
@@ -7,6 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.ehsanmashhadi.library.R;
+import com.ehsanmashhadi.library.model.Country;
 
 import java.util.List;
 

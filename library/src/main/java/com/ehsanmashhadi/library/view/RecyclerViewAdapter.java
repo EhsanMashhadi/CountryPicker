@@ -18,11 +18,14 @@ import androidx.annotation.StyleRes;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.CountryHolder> {
+public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.CountryHolder> {
 
     public interface OnCountryClickListener {
         void onCountrySelected(Country country);
+
     }
+
+
 
     private List<Country> mCountryList;
     private OnCountryClickListener mOnCountryClickListener;

@@ -3,6 +3,8 @@ package com.ehsanmashhadi.library.view;
 
 import android.content.Context;
 import android.content.res.Configuration;
+import android.os.Build;
+import android.telephony.TelephonyManager;
 import android.view.LayoutInflater;
 import android.view.View;
 
@@ -23,6 +25,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class CountryPicker implements CountryPickerContractor.View {
 
+    public interface OnAutoDetectCountryListener {
+        void onCountryDetected(Country country);
+    }
+
     private Sort mSort;
     private ViewType mViewType;
     private boolean mShowingFlag = true;
@@ -36,8 +42,10 @@ public class CountryPicker implements CountryPickerContractor.View {
     private RecyclerView mRecyclerView;
     private SearchView mSearchViewCountry;
     private int mStyle;
+    private DetectionMethod mDetectionMethod;
 
     private RecyclerViewAdapter.OnCountryClickListener mOnCountryClickListener;
+    private OnAutoDetectCountryListener mOnAutoDetectCountryListener;
     private View mView;
     private CountryPickerContractor.Presenter mPresenter;
 
@@ -54,6 +62,7 @@ public class CountryPicker implements CountryPickerContractor.View {
         initCountries();
         sort();
         initSearchView();
+        initDetectionMethod();
     }
 
     private void sort() {
@@ -63,6 +72,8 @@ public class CountryPicker implements CountryPickerContractor.View {
 
     private void initAttributes(Builder builder) {
 
+        mOnAutoDetectCountryListener = builder.mOnAutoDetectCountryListener;
+        mDetectionMethod = builder.mDetectionMethod;
         mShowingFlag = builder.mShowingFlag;
         mSort = builder.mSort;
         mViewType = builder.mViewType;
@@ -132,6 +143,72 @@ public class CountryPicker implements CountryPickerContractor.View {
         }
     }
 
+    private void initDetectionMethod() {
+
+        switch (mDetectionMethod) {
+            case LOCALE:
+                detectByLocale();
+                break;
+            case SIM:
+                detectBySim();
+                break;
+            case NETWORK:
+                detectByNetwork();
+                break;
+
+        }
+
+    }
+
+    private void detectByLocale() {
+
+        Locale locale;
+        String countryValue;
+
+        if (mLocale != null)
+            countryValue = mLocale.getCountry();
+        else {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                locale = mContext.getResources().getConfiguration().getLocales().get(0);
+            } else {
+                locale = mContext.getResources().getConfiguration().locale;
+            }
+            countryValue = locale.getCountry();
+        }
+        Country country = getCountryByCode(countryValue);
+        mOnAutoDetectCountryListener.onCountryDetected(country);
+    }
+
+    private Country getCountryByCode(String countryIso) {
+
+        if (countryIso == null || countryIso.equals(""))
+            countryIso = "us";
+
+        for (Country country : mCountries) {
+            if (country.getCode().toLowerCase().equals(countryIso.toLowerCase())) {
+                return country;
+            }
+        }
+        return getCountryByCode("us");
+    }
+
+    private void detectBySim() {
+
+        TelephonyManager tm = (TelephonyManager) mContext.getSystemService(Context.TELEPHONY_SERVICE);
+        String countryCode = tm.getSimCountryIso();
+        Country country = getCountryByCode(countryCode);
+        mOnAutoDetectCountryListener.onCountryDetected(country);
+    }
+
+    private void detectByNetwork() {
+
+        TelephonyManager tm = (TelephonyManager) mContext.getSystemService(Context.TELEPHONY_SERVICE);
+        String countryCode = tm.getNetworkCountryIso();
+        Country country = getCountryByCode(countryCode);
+        mOnAutoDetectCountryListener.onCountryDetected(country);
+
+    }
+
     public void show(AppCompatActivity activity) {
 
         BaseView baseView = ViewFactory.create(mViewType, activity);
@@ -150,8 +227,11 @@ public class CountryPicker implements CountryPickerContractor.View {
         private boolean mShowingFlag;
         private boolean mEnablingSearch;
         private boolean mShowingDialCode;
+        private DetectionMethod mDetectionMethod;
         private Sort mSort = Sort.NONE;
         private RecyclerViewAdapter.OnCountryClickListener mOnCountryClickListener;
+        private OnAutoDetectCountryListener mOnAutoDetectCountryListener;
+
         private Context mContext;
         private Locale mLocale;
         private List<String> mExceptCountries;
@@ -199,6 +279,14 @@ public class CountryPicker implements CountryPickerContractor.View {
             return this;
         }
 
+        public Builder enableAutoDetectCountry(DetectionMethod detectionMethod, OnAutoDetectCountryListener onAutoDetectCountryListener) {
+
+            mDetectionMethod = detectionMethod;
+            mOnAutoDetectCountryListener = onAutoDetectCountryListener;
+            return this;
+
+        }
+
         public Builder setLocale(Locale locale) {
 
             mLocale = locale;
@@ -232,5 +320,11 @@ public class CountryPicker implements CountryPickerContractor.View {
     public enum ViewType {
         DIALOG,
         BOTTOMSHEET;
+    }
+
+    public enum DetectionMethod {
+        LOCALE,
+        SIM,
+        NETWORK
     }
 }

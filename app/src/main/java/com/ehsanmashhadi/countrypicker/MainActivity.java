@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         list.add("ALBANIA");
         list.add("ALgERia");
 
-        CountryPicker countryPicker = new CountryPicker.Builder(this).setStyle(R.style.CountryPickerLightStyle).exceptCountriesName(list)
+        CountryPicker countryPicker = new CountryPicker.Builder(this).showingDialCode(false).setStyle(R.style.CountryPickerLightStyle).exceptCountriesName(list).showingFlag(false)
                 .sortBy(CountryPicker.Sort.NONE).setViewType(CountryPicker.ViewType.BOTTOMSHEET).enablingSearch(true).setListener(country ->
                         Toast.makeText(this, country.getName(), Toast.LENGTH_LONG).show()).build();
         countryPicker.show(this);

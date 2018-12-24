@@ -19,8 +19,10 @@ public class CountryPicker implements CountryPickerContractor.View {
 
     private Sort mSort;
     private ViewType mViewType;
-    private boolean mShowingFlag;
-    private boolean mEnablingSearch;
+    private boolean mShowingFlag = true;
+    private boolean mEnablingSearch = true;
+    private boolean mShowingDialCode = true;
+
     private Context mContext;
     private List<Country> mCountries;
     private List<String> mExceptCountriesName;
@@ -60,6 +62,7 @@ public class CountryPicker implements CountryPickerContractor.View {
         mViewType = builder.mViewType;
         mEnablingSearch = builder.mEnablingSearch;
         mOnCountryClickListener = builder.mOnCountryClickListener;
+        mShowingDialCode = builder.mShowingDialCode;
         mLocale = builder.mLocale;
         mContext = builder.mContext;
         mExceptCountriesName = builder.mExceptCountries;
@@ -75,7 +78,7 @@ public class CountryPicker implements CountryPickerContractor.View {
         mView = layoutInflater.inflate(R.layout.layout_countrypicker, null);
         mRecyclerView = mView.findViewById(R.id.recyclerview_countries);
         mRecyclerView.addItemDecoration(new DividerItemDecoration(mContext, DividerItemDecoration.VERTICAL));
-        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(mCountries, mStyle);
+        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(mCountries, mStyle, mShowingFlag, mShowingDialCode);
         if (mOnCountryClickListener != null)
             recyclerViewAdapter.setListener(mOnCountryClickListener);
         LinearLayoutManager layoutManager = new LinearLayoutManager(mContext);
@@ -140,6 +143,7 @@ public class CountryPicker implements CountryPickerContractor.View {
 
         private boolean mShowingFlag;
         private boolean mEnablingSearch;
+        private boolean mShowingDialCode;
         private Sort mSort = Sort.NONE;
         private RecyclerViewAdapter.OnCountryClickListener mOnCountryClickListener;
         private Context mContext;
@@ -168,6 +172,12 @@ public class CountryPicker implements CountryPickerContractor.View {
         public Builder showingFlag(boolean showingFlag) {
 
             mShowingFlag = showingFlag;
+            return this;
+        }
+
+        public Builder showingDialCode(boolean showingDialCode) {
+
+            mShowingDialCode = showingDialCode;
             return this;
         }
 

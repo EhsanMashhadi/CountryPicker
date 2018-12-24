@@ -24,11 +24,16 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.Count
     private List<Country> mCountryList;
     private OnCountryClickListener mOnCountryClickListener;
     private static int sStyle;
+    private static boolean sShowingFlag;
+    private static boolean sShowingDialCode;
 
-    RecyclerViewAdapter(List<Country> countryList, @StyleRes int style) {
+
+    RecyclerViewAdapter(List<Country> countryList, @StyleRes int style, boolean showingFlag, boolean showingDialCode) {
 
         mCountryList = countryList;
         sStyle = style;
+        sShowingFlag = showingFlag;
+        sShowingDialCode = showingDialCode;
     }
 
     public void setListener(OnCountryClickListener onCountryClickListener) {
@@ -88,6 +93,13 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.Count
             mTextViewName = itemView.findViewById(R.id.textview_name);
             mTextViewCode = itemView.findViewById(R.id.textview_code);
             mImageViewFlag = itemView.findViewById(R.id.imageview_flag);
+
+            if (!sShowingFlag) {
+                mImageViewFlag.setVisibility(View.GONE);
+            }
+            if (!sShowingDialCode) {
+                mTextViewCode.setVisibility(View.GONE);
+            }
 
             mTextViewName.setTextColor(ContextCompat.getColor(itemView.getContext(), countryNameColor));
             mTextViewCode.setTextColor(ContextCompat.getColor(itemView.getContext(), dialCodeColor));

@@ -20,11 +20,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         List<String> list = new ArrayList<>();
-        list.add("afghanistan");
         list.add("ALBANIA");
         list.add("ALgERia");
 
-        CountryPicker countryPicker = new CountryPicker.Builder(this).showingDialCode(false).setLocale(new Locale("fa")).setStyle(R.style.CountryPickerLightStyle).exceptCountriesName(list).showingFlag(false)
+        CountryPicker countryPicker = new CountryPicker.Builder(this).showingDialCode(false).setPreSelectedCountry("guam").exceptCountriesName(list).showingFlag(false)
                 .sortBy(CountryPicker.Sort.NONE).setViewType(CountryPicker.ViewType.BOTTOMSHEET).enablingSearch(true).setListener(country ->
                         Toast.makeText(this, country.getName(), Toast.LENGTH_LONG).show()).enableAutoDetectCountry(CountryPicker.DetectionMethod.LOCALE, country -> {
                     Toast.makeText(this, country.getName(), Toast.LENGTH_LONG).show();

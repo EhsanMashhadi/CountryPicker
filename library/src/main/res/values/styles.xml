@@ -8,6 +8,21 @@
     <style name="TextStyle" parent="BaseTextStyle">
     </style>
 
+    <style name="BaseCountryTextStyle" parent="TextStyle">
+        <item name="android:textColor">?countryNameColor</item>
+    </style>
+
+    <style name="CountryTextStyle" parent="BaseCountryTextStyle">
+        <item name="android:textColor">?countryNameColor</item>
+    </style>
+
+    <style name="BaseDialCodeTextStyle" parent="TextStyle">
+        <item name="android:textColor">?dialCodeColor</item>
+    </style>
+
+    <style name="DialCodeTextStyle" parent="BaseDialCodeTextStyle">
+
+    </style>
 
     <style name="DialogStyle" parent="Theme.AppCompat.Dialog">
         <item name="android:windowMinWidthMajor">90%</item>
@@ -16,15 +31,17 @@
 
     <style name="CountryPickerDarkStyle">
         <item name="countryNameColor">@color/countryNameColorOnDark</item>
-        <item name="rowBackgroundColor">@color/rowBackgroundColorDark</item>
         <item name="dialCodeColor">@color/dialCodeColorOnDark</item>
+        <item name="rowBackgroundColor">@color/rowBackgroundColorDark</item>
+        <item name="rowBackgroundSelectedColor">@color/rowBackgroundSelectedColorDark</item>
+
     </style>
 
     <style name="CountryPickerLightStyle">
         <item name="countryNameColor">@color/countryNameColorOnLight</item>
-        <item name="rowBackgroundColor">@color/rowBackgroundColorLight</item>
         <item name="dialCodeColor">@color/dialCodeColorOnLight</item>
-
+        <item name="rowBackgroundColor">@color/rowBackgroundColorLight</item>
+        <item name="rowBackgroundSelectedColor">@color/rowBackgroundSelectedColorLight</item>
     </style>
 
 </resources>

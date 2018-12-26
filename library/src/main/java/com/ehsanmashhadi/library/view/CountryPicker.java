@@ -34,6 +34,7 @@ public class CountryPicker implements CountryPickerContractor.View {
     private boolean mShowingFlag = true;
     private boolean mEnablingSearch = true;
     private boolean mShowingDialCode = true;
+    private String mPreSelectedCountry;
 
     private Context mContext;
     private List<Country> mCountries;
@@ -84,9 +85,11 @@ public class CountryPicker implements CountryPickerContractor.View {
         mContext = builder.mContext;
         mExceptCountriesName = builder.mExceptCountries;
         mStyle = builder.mStyle;
+        mPreSelectedCountry = builder.mPreSelectedCountry;
         if (mStyle == 0) {
             mStyle = R.style.CountryPickerLightStyle;
         }
+        builder.mContext.getTheme().applyStyle(mStyle, true);
     }
 
     private void initView() {
@@ -95,13 +98,14 @@ public class CountryPicker implements CountryPickerContractor.View {
         mView = layoutInflater.inflate(R.layout.layout_countrypicker, null);
         mRecyclerView = mView.findViewById(R.id.recyclerview_countries);
         mRecyclerView.addItemDecoration(new DividerItemDecoration(mContext, DividerItemDecoration.VERTICAL));
-        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(mCountries, mStyle, mShowingFlag, mShowingDialCode);
+        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(mCountries, mPreSelectedCountry, mShowingFlag, mShowingDialCode);
         if (mOnCountryClickListener != null)
             recyclerViewAdapter.setListener(mOnCountryClickListener);
         LinearLayoutManager layoutManager = new LinearLayoutManager(mContext);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setAdapter(recyclerViewAdapter);
         mRecyclerView.setLayoutManager(layoutManager);
+
     }
 
     private void initSearchView() {
@@ -155,9 +159,7 @@ public class CountryPicker implements CountryPickerContractor.View {
             case NETWORK:
                 detectByNetwork();
                 break;
-
         }
-
     }
 
     private void detectByLocale() {
@@ -192,6 +194,7 @@ public class CountryPicker implements CountryPickerContractor.View {
         return getCountryByCode("us");
     }
 
+
     private void detectBySim() {
 
         TelephonyManager tm = (TelephonyManager) mContext.getSystemService(Context.TELEPHONY_SERVICE);
@@ -220,6 +223,14 @@ public class CountryPicker implements CountryPickerContractor.View {
 
         mCountries = countries;
         ((RecyclerViewAdapter) mRecyclerView.getAdapter()).setCountries(countries);
+        if (mPreSelectedCountry != null) {
+            for (Country country : mCountries) {
+                if (country.getName().toLowerCase().equals(mPreSelectedCountry.toLowerCase())) {
+                    mRecyclerView.scrollToPosition(mCountries.indexOf(country));
+                    break;
+                }
+            }
+        }
     }
 
     public static class Builder {
@@ -227,6 +238,7 @@ public class CountryPicker implements CountryPickerContractor.View {
         private boolean mShowingFlag;
         private boolean mEnablingSearch;
         private boolean mShowingDialCode;
+        private String mPreSelectedCountry;
         private DetectionMethod mDetectionMethod;
         private Sort mSort = Sort.NONE;
         private RecyclerViewAdapter.OnCountryClickListener mOnCountryClickListener;
@@ -290,6 +302,12 @@ public class CountryPicker implements CountryPickerContractor.View {
         public Builder setLocale(Locale locale) {
 
             mLocale = locale;
+            return this;
+        }
+
+        public Builder setPreSelectedCountry(String preSelectedCountry) {
+
+            mPreSelectedCountry = preSelectedCountry;
             return this;
         }
 

@@ -47,16 +47,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public CountryHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_country, parent, false);
-//        return new CountryHolder(itemView, position -> mOnCountryClickListener.onCountrySelected(mCountryList.get(position)));
-        return new CountryHolder(itemView, new CountryHolder.OnItemClickListener() {
-            @Override
-            public void onItemSelected(int position) {
-
-                mOnCountryClickListener.onCountrySelected(mCountryList.get(position));
-                itemView.setSelected(true);
-                sPreselectCountry = mCountryList.get(position).getName();
-                notifyDataSetChanged();
-            }
+        return new CountryHolder(itemView, position -> {
+            mOnCountryClickListener.onCountrySelected(mCountryList.get(position));
+            itemView.setSelected(true);
+            sPreselectCountry = mCountryList.get(position).getName();
+            notifyDataSetChanged();
         });
     }
 

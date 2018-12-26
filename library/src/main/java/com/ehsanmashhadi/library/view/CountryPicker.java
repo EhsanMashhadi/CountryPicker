@@ -14,6 +14,7 @@ import com.ehsanmashhadi.library.presenter.CountryPickerContractor;
 import com.ehsanmashhadi.library.presenter.CountryPickerPresenter;
 import com.ehsanmashhadi.library.repository.ResourceCountryRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -38,6 +39,7 @@ public class CountryPicker implements CountryPickerContractor.View {
 
     private Context mContext;
     private List<Country> mCountries;
+    private List<String> mCountriesName;
     private List<String> mExceptCountriesName;
     private Locale mLocale;
     private RecyclerView mRecyclerView;
@@ -73,6 +75,7 @@ public class CountryPicker implements CountryPickerContractor.View {
 
     private void initAttributes(Builder builder) {
 
+        mCountriesName = builder.mCountries;
         mOnAutoDetectCountryListener = builder.mOnAutoDetectCountryListener;
         mDetectionMethod = builder.mDetectionMethod;
         mShowingFlag = builder.mShowingFlag;
@@ -191,7 +194,7 @@ public class CountryPicker implements CountryPickerContractor.View {
                 return country;
             }
         }
-        return getCountryByCode("us");
+        return mCountries.get(0);
     }
 
 
@@ -221,8 +224,21 @@ public class CountryPicker implements CountryPickerContractor.View {
     @Override
     public void setCountries(List<Country> countries) {
 
-        mCountries = countries;
-        ((RecyclerViewAdapter) mRecyclerView.getAdapter()).setCountries(countries);
+        if (mCountriesName != null) {
+            mCountries = new ArrayList<>();
+            for (String countryName : mCountriesName) {
+                for (Country country : countries) {
+                    if (countryName.toLowerCase().equals(country.getName().toLowerCase())) {
+                        mCountries.add(country);
+                        break;
+                    }
+                }
+            }
+        } else {
+            mCountries = countries;
+        }
+
+        ((RecyclerViewAdapter) mRecyclerView.getAdapter()).setCountries(mCountries);
         if (mPreSelectedCountry != null) {
             for (Country country : mCountries) {
                 if (country.getName().toLowerCase().equals(mPreSelectedCountry.toLowerCase())) {
@@ -243,6 +259,7 @@ public class CountryPicker implements CountryPickerContractor.View {
         private Sort mSort = Sort.NONE;
         private RecyclerViewAdapter.OnCountryClickListener mOnCountryClickListener;
         private OnAutoDetectCountryListener mOnAutoDetectCountryListener;
+        private List<String> mCountries;
 
         private Context mContext;
         private Locale mLocale;
@@ -320,6 +337,15 @@ public class CountryPicker implements CountryPickerContractor.View {
         public Builder setViewType(ViewType viewType) {
 
             mViewType = viewType;
+            return this;
+        }
+
+        public Builder setCountries(List<String> countries) {
+
+            if (countries == null || countries.size() < 1) {
+                throw new UnsupportedOperationException("Country list should contain at least one country");
+            }
+            mCountries = countries;
             return this;
         }
 

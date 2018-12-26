@@ -24,7 +24,7 @@ public class CountryPickerPresenter implements CountryPickerContractor.Presenter
     public void getCountries(List<String> exceptCountries) {
 
         List<Country> countries = mICountryRepository.getCountries();
-        if (exceptCountries.size() > 0) {
+        if (exceptCountries != null && exceptCountries.size() > 0) {
             countries = exceptCountriesByName(countries, exceptCountries);
         }
         mCountries = countries;
@@ -49,7 +49,7 @@ public class CountryPickerPresenter implements CountryPickerContractor.Presenter
 
         List<Country> filteredCountries = new ArrayList<>();
         for (Country country : mCountries) {
-            if (country.getName().contains(query)) {
+            if (country.getName().toLowerCase().contains(query.toLowerCase())) {
                 filteredCountries.add(country);
             }
         }

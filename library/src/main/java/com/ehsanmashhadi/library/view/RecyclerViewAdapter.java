@@ -21,7 +21,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     }
 
-
     private List<Country> mCountryList;
     private OnCountryClickListener mOnCountryClickListener;
     private static boolean sShowingFlag;
@@ -60,8 +59,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         holder.mTextViewName.setText(mCountryList.get(position).getName());
         holder.mTextViewCode.setText(mCountryList.get(position).getDialCode());
-        holder.mImageViewFlag.setImageResource(android.R.drawable.ic_input_add);
 
+
+        int resourceId = holder.itemView.getContext().getResources().getIdentifier(mCountryList.get(position).
+                getFlagName(), "drawable", holder.itemView.getContext().getPackageName());
+        holder.mImageViewFlag.setImageResource(resourceId);
+        //TODO(Ehsan): Check if preselected country is null or not
         if (mCountryList.get(position).getName().toLowerCase().equals(sPreselectCountry.toLowerCase())) {
             holder.itemView.setSelected(true);
         } else {
@@ -99,7 +102,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             mTextViewCode = itemView.findViewById(R.id.textview_code);
             mImageViewFlag = itemView.findViewById(R.id.imageview_flag);
 
-            if (!sShowingFlag) {
+            if (sShowingFlag) {
                 mImageViewFlag.setVisibility(View.GONE);
             }
             if (!sShowingDialCode) {

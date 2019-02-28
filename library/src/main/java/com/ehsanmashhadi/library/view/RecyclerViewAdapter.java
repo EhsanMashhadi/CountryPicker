@@ -35,7 +35,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         sPreselectCountry = preselectCountry;
     }
 
-    public void setListener(OnCountryClickListener onCountryClickListener) {
+    void setListener(OnCountryClickListener onCountryClickListener) {
 
         mOnCountryClickListener = onCountryClickListener;
 
@@ -64,12 +64,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         int resourceId = holder.itemView.getContext().getResources().getIdentifier(mCountryList.get(position).
                 getFlagName(), "drawable", holder.itemView.getContext().getPackageName());
         holder.mImageViewFlag.setImageResource(resourceId);
-        //TODO(Ehsan): Check if preselected country is null or not
-        if (mCountryList.get(position).getName().toLowerCase().equals(sPreselectCountry.toLowerCase())) {
-            holder.itemView.setSelected(true);
-        } else {
-            holder.itemView.setSelected(false);
-        }
+        if (sPreselectCountry != null)
+            if (mCountryList.get(position).getName().toLowerCase().equals(sPreselectCountry.toLowerCase())) {
+                holder.itemView.setSelected(true);
+            } else {
+                holder.itemView.setSelected(false);
+            }
     }
 
     @Override

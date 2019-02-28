@@ -13,9 +13,10 @@ public class Country {
     @SerializedName("phone_code")
     private String mDialCode;
 
-    private int mFlag;
+    @SerializedName("flag")
+    private String mFlag;
 
-    public Country(String name, String code, String dialCode, int flag) {
+    public Country(String name, String code, String dialCode, String flag) {
 
         mName = name;
         mCode = code;
@@ -38,7 +39,7 @@ public class Country {
         return mDialCode;
     }
 
-    public int getFlag() {
+    public String getFlagName() {
 
         return mFlag;
     }

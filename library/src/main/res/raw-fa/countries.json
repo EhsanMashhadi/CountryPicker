@@ -2,1161 +2,1465 @@
   {
     "name": "افغانستان",
     "code": "AF",
-    "phone_code": "+93"
+    "phone_code": "+93",
+    "flag": "af"
   },
   {
     "name": "آلبانی",
     "code": "AL",
-    "phone_code": "+355"
+    "phone_code": "+355",
+    "flag": "al"
   },
   {
-    "name": "Algeria",
+    "name": "الجزایر",
     "code": "DZ",
-    "phone_code": "+213"
+    "phone_code": "+213",
+    "flag": "dz"
   },
   {
-    "name": "American Samoa",
+    "name": "ساموای آمریکایی",
     "code": "AS",
-    "phone_code": "+1"
+    "phone_code": "+1",
+    "flag": "as"
   },
   {
-    "name": "Andorra",
+    "name": "آندورا",
     "code": "AD",
-    "phone_code": "+376"
+    "phone_code": "+376",
+    "flag": "ad"
   },
   {
-    "name": "Angola",
+    "name": "آنگولا",
     "code": "AO",
-    "phone_code": "+244"
+    "phone_code": "+244",
+    "flag": "ao"
   },
   {
-    "name": "Anguilla",
+    "name": "آنگویلا",
     "code": "AI",
-    "phone_code": "+1"
+    "phone_code": "+1",
+    "flag": "ai"
   },
   {
-    "name": "Antigua",
+    "name": "آنتیگوا",
     "code": "AG",
-    "phone_code": "+1"
+    "phone_code": "+1",
+    "flag": "ag"
   },
   {
-    "name": "Argentina",
+    "name": "آرژانتین",
     "code": "AR",
-    "phone_code": "+54"
+    "phone_code": "+54",
+    "flag": "ar"
   },
   {
-    "name": "Armenia",
+    "name": "ارمنستان",
     "code": "AM",
-    "phone_code": "+374"
+    "phone_code": "+374",
+    "flag": "am"
   },
   {
-    "name": "Aruba",
+    "name": "آروبا",
     "code": "AW",
-    "phone_code": "+297"
+    "phone_code": "+297",
+    "flag": "aw"
   },
   {
-    "name": "Australia",
+    "name": "استرالیا",
     "code": "AU",
-    "phone_code": "+61"
+    "phone_code": "+61",
+    "flag": "au"
   },
   {
-    "name": "Austria",
-    "code": "AI",
-    "phone_code": "+43"
+    "name": "اتریش",
+    "code": "AT",
+    "phone_code": "+43",
+    "flag": "at"
   },
   {
-    "name": "Azerbaijan",
+    "name": "آذربایجان",
     "code": "AZ",
-    "phone_code": "+994"
+    "phone_code": "+994",
+    "flag": "az"
   },
   {
-    "name": "Bahrain",
+    "name": "بحرین",
     "code": "BH",
-    "phone_code": "+973"
+    "phone_code": "+973",
+    "flag": "bh"
   },
   {
-    "name": "Bangladesh",
+    "name": "بنگلادش",
     "code": "BD",
-    "phone_code": "+880"
+    "phone_code": "+880",
+    "flag": "bd"
   },
   {
-    "name": "Barbados",
+    "name": "باربادوس",
     "code": "BB",
-    "phone_code": "+1"
+    "phone_code": "+1",
+    "flag": "bb"
   },
   {
-    "name": "Belarus",
+    "name": "بلاروس",
     "code": "BY",
-    "phone_code": "+375"
+    "phone_code": "+375",
+    "flag": "by"
   },
   {
-    "name": "Belgium",
+    "name": "بلژیک",
     "code": "BE",
-    "phone_code": "+32"
+    "phone_code": "+32",
+    "flag": "be"
   },
   {
-    "name": "Belize",
+    "name": "بلیز",
     "code": "BZ",
-    "phone_code": "+501"
+    "phone_code": "+501",
+    "flag": "bz"
   },
   {
-    "name": "Benin",
+    "name": "بنین",
     "code": "BJ",
-    "phone_code": "+229"
+    "phone_code": "+229",
+    "flag": "bj"
   },
   {
-    "name": "Bermuda",
+    "name": "برمودا",
     "code": "BM",
-    "phone_code": "+1"
+    "phone_code": "+1",
+    "flag": "bm"
   },
   {
-    "name": "Bhutan",
+    "name": "بوتان",
     "code": "BT",
-    "phone_code": "+975"
+    "phone_code": "+975",
+    "flag": "bt"
   },
   {
-    "name": "Bolivia",
+    "name": "بولیوی",
     "code": "BO",
-    "phone_code": "+591"
+    "phone_code": "+591",
+    "flag": "bo"
   },
   {
-    "name": "Bosnia and Herzegovina",
+    "name": "بوسنی و هرزگوین",
     "code": "BA",
-    "phone_code": "+387"
+    "phone_code": "+387",
+    "flag": "ba"
   },
   {
-    "name": "Botswana",
+    "name": "بوتسوانا",
     "code": "BW",
-    "phone_code": "+267"
+    "phone_code": "+267",
+    "flag": "bw"
   },
   {
-    "name": "Brazil",
+    "name": "برزیل",
     "code": "BR",
-    "phone_code": "+55"
+    "phone_code": "+55",
+    "flag": "br"
   },
   {
-    "name": "British Indian Ocean Territory",
+    "name": "قلمرو اقیانوس هند بریتانیا",
     "code": "IO",
-    "phone_code": "+246"
+    "phone_code": "+246",
+    "flag": "io"
   },
   {
-    "name": "British Virgin Islands",
+    "name": "جزایر ویرجین بریتانیا",
     "code": "VG",
-    "phone_code": "+1"
+    "phone_code": "+1",
+    "flag": "vg"
   },
   {
-    "name": "Brunei",
+    "name": "برونئی",
     "code": "BN",
-    "phone_code": "+673"
+    "phone_code": "+673",
+    "flag": "bn"
   },
   {
-    "name": "Bulgaria",
+    "name": "بلغارستان",
     "code": "BG",
-    "phone_code": "+359"
+    "phone_code": "+359",
+    "flag": "bg"
   },
   {
-    "name": "Burkina Faso",
+    "name": "بورکینافاسو",
     "code": "BF",
-    "phone_code": "+226"
+    "phone_code": "+226",
+    "flag": "bf"
   },
   {
-    "name": "Burma Myanmar",
+    "name": "برمه میانمار",
     "code": "MM",
-    "phone_code": "+95"
+    "phone_code": "+95",
+    "flag": "mm"
   },
   {
-    "name": "Burundi",
+    "name": "بوروندی",
     "code": "BI",
-    "phone_code": "+257"
+    "phone_code": "+257",
+    "flag": "bi"
   },
   {
-    "name": "Cambodia",
+    "name": "کامبوج",
     "code": "KH",
-    "phone_code": "+855"
+    "phone_code": "+855",
+    "flag": "kh"
   },
   {
-    "name": "Cameroon",
+    "name": "کامرون",
     "code": "CM",
-    "phone_code": "+237"
+    "phone_code": "+237",
+    "flag": "cm"
   },
   {
-    "name": "Canada",
+    "name": "کانادا",
     "code": "CA",
-    "phone_code": "+1"
+    "phone_code": "+1",
+    "flag": "ca"
   },
   {
-    "name": "Cape Verde",
+    "name": "کیپ ورد",
     "code": "CV",
-    "phone_code": "+238"
+    "phone_code": "+238",
+    "flag": "cv"
   },
   {
-    "name": "Cayman Islands",
+    "name": "جزایر کیمن",
     "code": "KY",
-    "phone_code": "+1"
+    "phone_code": "+1",
+    "flag": "ky"
   },
   {
-    "name": "Central African Republic",
+    "name": "جمهوری آفریقای مرکزی",
     "code": "CF",
-    "phone_code": "+236"
+    "phone_code": "+236",
+    "flag": "cf"
   },
   {
-    "name": "Chad",
-    "code": "ID",
-    "phone_code": "+235"
-  },
-  {
-    "name": "Chile",
+    "name": "شیلی",
     "code": "CL",
-    "phone_code": "+56"
+    "phone_code": "+56",
+    "flag": "cl"
   },
   {
-    "name": "China",
+    "name": "چین",
     "code": "CN",
-    "phone_code": "+86"
+    "phone_code": "+86",
+    "flag": "cn"
   },
   {
-    "name": "Colombia",
+    "name": "کلمبیا",
     "code": "CO",
-    "phone_code": "+57"
+    "phone_code": "+57",
+    "flag": "co"
   },
   {
-    "name": "Comoros",
+    "name": "کومور",
     "code": "KM",
-    "phone_code": "+269"
+    "phone_code": "+269",
+    "flag": "km"
   },
   {
-    "name": "Cook Islands",
+    "name": "جزایر کوک",
     "code": "CK",
-    "phone_code": "+682"
+    "phone_code": "+682",
+    "flag": "ck"
   },
   {
-    "name": "Costa Rica",
+    "name": "کاستاریکا",
     "code": "CR",
-    "phone_code": "+506"
+    "phone_code": "+506",
+    "flag": "cr"
   },
   {
-    "name": "Côte dIvoire",
+    "name": "کوته دیووار",
     "code": "CI",
-    "phone_code": "+225"
+    "phone_code": "+225",
+    "flag": "ci"
   },
   {
-    "name": "Croatia",
+    "name": "کرواسی",
     "code": "HR",
-    "phone_code": "+385"
+    "phone_code": "+385",
+    "flag": "hr"
   },
   {
-    "name": "Cuba",
+    "name": "کوبا",
     "code": "CU",
-    "phone_code": "+53"
+    "phone_code": "+53",
+    "flag": "cu"
   },
   {
-    "name": "Cyprus",
+    "name": "قبرس",
     "code": "CY",
-    "phone_code": "+357"
+    "phone_code": "+357",
+    "flag": "cy"
   },
   {
-    "name": "Czech Republic",
+    "name": "جمهوری چک",
     "code": "CZ",
-    "phone_code": "+420"
+    "phone_code": "+420",
+    "flag": "cz"
   },
   {
-    "name": "Democratic Republic of Congo",
+    "name": "جمهوری دموکراتیک کنگو",
     "code": "CD",
-    "phone_code": "+243"
+    "phone_code": "+243",
+    "flag": "cd"
   },
   {
-    "name": "Denmark",
+    "name": "دانمارک",
     "code": "DK",
-    "phone_code": "+45"
+    "phone_code": "+45",
+    "flag": "dk"
   },
   {
-    "name": "Djibouti",
+    "name": "جیبوتی",
     "code": "DJ",
-    "phone_code": "+253"
+    "phone_code": "+253",
+    "flag": "dj"
   },
   {
-    "name": "Dominica",
+    "name": "دومینیکا",
     "code": "DM",
-    "phone_code": "+1"
+    "phone_code": "+1",
+    "flag": "dm"
   },
   {
-    "name": "Dominican Republic",
+    "name": "جمهوری دومینیکن",
     "code": "DO",
-    "phone_code": "+1"
+    "phone_code": "+1",
+    "flag": "doo"
   },
   {
-    "name": "Ecuador",
+    "name": "اکوادور",
     "code": "EC",
-    "phone_code": "+593"
+    "phone_code": "+593",
+    "flag": "ec"
   },
   {
-    "name": "Egypt",
+    "name": "مصر",
     "code": "EG",
-    "phone_code": "+20"
+    "phone_code": "+20",
+    "flag": "eg"
   },
   {
-    "name": "El Salvador",
+    "name": "السالوادور",
     "code": "SV",
-    "phone_code": "+503"
+    "phone_code": "+503",
+    "flag": "sv"
   },
   {
-    "name": "Equatorial Guinea",
+    "name": "گینه استوایی",
     "code": "GQ",
-    "phone_code": "+240"
+    "phone_code": "+240",
+    "flag": "gq"
   },
   {
-    "name": "Eritrea",
+    "name": "اریتره",
     "code": "ER",
-    "phone_code": "+291"
+    "phone_code": "+291",
+    "flag": "er"
   },
   {
-    "name": "Estonia",
+    "name": "استونی",
     "code": "EE",
-    "phone_code": "+372"
+    "phone_code": "+372",
+    "flag": "ee"
   },
   {
-    "name": "Ethiopia",
+    "name": "اتیوپی",
     "code": "ET",
-    "phone_code": "+251"
+    "phone_code": "+251",
+    "flag": "et"
   },
   {
-    "name": "Falkland Islands",
+    "name": "جزایر فالکلند",
     "code": "FK",
-    "phone_code": "+500"
+    "phone_code": "+500",
+    "flag": "fk"
   },
   {
-    "name": "Faroe Islands",
+    "name": "جزایر فارو",
     "code": "FO",
-    "phone_code": "+298"
+    "phone_code": "+298",
+    "flag": "fo"
   },
   {
-    "name": "Federated States of Micronesia",
+    "name": "ایالات فدرال میکرونزی",
     "code": "FM",
-    "phone_code": "+691"
+    "phone_code": "+691",
+    "flag": "fm"
   },
   {
-    "name": "Fiji",
+    "name": "فیجی",
     "code": "FJ",
-    "phone_code": "+679"
+    "phone_code": "+679",
+    "flag": "fj"
   },
   {
-    "name": "Finland",
+    "name": "فنلاند",
     "code": "FI",
-    "phone_code": "+358"
+    "phone_code": "+358",
+    "flag": "fi"
   },
   {
-    "name": "France",
+    "name": "فرانسه",
     "code": "FR",
-    "phone_code": "+33"
+    "phone_code": "+33",
+    "flag": "fr"
   },
   {
-    "name": "French Guiana",
+    "name": "گویان فرانسه",
     "code": "GF",
-    "phone_code": "+594"
+    "phone_code": "+594",
+    "flag": "gf"
   },
   {
-    "name": "French Polynesia",
+    "name": "پلینزی فرانسه",
     "code": "PF",
-    "phone_code": "+689"
+    "phone_code": "+689",
+    "flag": "pf"
   },
   {
-    "name": "Gabon",
+    "name": "گابن",
     "code": "GA",
-    "phone_code": "+241"
+    "phone_code": "+241",
+    "flag": "ga"
   },
   {
-    "name": "Georgia",
+    "name": "گرجستان",
     "code": "GE",
-    "phone_code": "+995"
+    "phone_code": "+995",
+    "flag": "ge"
   },
   {
-    "name": "Germany",
+    "name": "آلمان",
     "code": "DE",
-    "phone_code": "+49"
+    "phone_code": "+49",
+    "flag": "de"
   },
   {
-    "name": "Ghana",
+    "name": "غنا",
     "code": "GH",
-    "phone_code": "+233"
+    "phone_code": "+233",
+    "flag": "gh"
   },
   {
-    "name": "Gibraltar",
+    "name": "جبل الطارق",
     "code": "GI",
-    "phone_code": "+350"
+    "phone_code": "+350",
+    "flag": "gi"
   },
   {
-    "name": "Greece",
+    "name": "یونان",
     "code": "GR",
-    "phone_code": "+30"
+    "phone_code": "+30",
+    "flag": "gr"
   },
   {
-    "name": "Greenland",
+    "name": "گرینلند",
     "code": "GL",
-    "phone_code": "+299"
+    "phone_code": "+299",
+    "flag": "gl"
   },
   {
-    "name": "Grenada",
+    "name": "گرانادا",
     "code": "GD",
-    "phone_code": "+1"
+    "phone_code": "+1",
+    "flag": "gd"
   },
   {
-    "name": "Guadeloupe",
+    "name": "گوادلوپ",
     "code": "GP",
-    "phone_code": "+590"
+    "phone_code": "+590",
+    "flag": "gp"
   },
   {
-    "name": "Guam",
+    "name": "گوام",
     "code": "GU",
-    "phone_code": "+1"
+    "phone_code": "+1",
+    "flag": "gu"
   },
   {
-    "name": "Guatemala",
+    "name": "گواتمالا",
     "code": "GT",
-    "phone_code": "+502"
+    "phone_code": "+502",
+    "flag": "gt"
   },
   {
-    "name": "Guinea",
+    "name": "گینه",
     "code": "GN",
-    "phone_code": "+224"
+    "phone_code": "+224",
+    "flag": "gn"
   },
   {
-    "name": "Guinea-Bissau",
+    "name": "گینه بیسائو",
     "code": "GW",
-    "phone_code": "+245"
+    "phone_code": "+245",
+    "flag": "gw"
   },
   {
-    "name": "Guyana",
+    "name": "گویان",
     "code": "GY",
-    "phone_code": "+592"
+    "phone_code": "+592",
+    "flag": "gy"
   },
   {
-    "name": "Haiti",
+    "name": "هائیتی",
     "code": "HT",
-    "phone_code": "+509"
+    "phone_code": "+509",
+    "flag": "ht"
   },
   {
-    "name": "Honduras",
+    "name": "هندوراس",
     "code": "HN",
-    "phone_code": "+504"
+    "phone_code": "+504",
+    "flag": "hn"
   },
   {
-    "name": "Hong Kong",
+    "name": "هنگ کنگ",
     "code": "HK",
-    "phone_code": "+852"
+    "phone_code": "+852",
+    "flag": "hk"
   },
   {
-    "name": "Hungary",
+    "name": "مجارستان",
     "code": "HU",
-    "phone_code": "+36"
+    "phone_code": "+36",
+    "flag": "hu"
   },
   {
-    "name": "Iceland",
+    "name": "ایسلند",
     "code": "IS",
-    "phone_code": "+354"
+    "phone_code": "+354",
+    "flag": "is"
   },
   {
-    "name": "India",
+    "name": "هندوستان",
     "code": "IN",
-    "phone_code": "+91"
+    "phone_code": "+91",
+    "flag": "in"
   },
   {
-    "name": "Indonesia",
+    "name": "اندونزی",
     "code": "ID",
-    "phone_code": "+62"
+    "phone_code": "+62",
+    "flag": "id"
   },
   {
-    "name": "Iran",
+    "name": "ایران",
     "code": "IR",
-    "phone_code": "+98"
+    "phone_code": "+98",
+    "flag": "ir"
   },
   {
-    "name": "Iraq",
+    "name": "عراق",
     "code": "IQ",
-    "phone_code": "+964"
+    "phone_code": "+964",
+    "flag": "iq"
   },
   {
-    "name": "Ireland",
+    "name": "ایرلند",
     "code": "IE",
-    "phone_code": "+353"
+    "phone_code": "+353",
+    "flag": "ie"
   },
   {
-    "name": "Israel",
+    "name": "اسرائیل",
     "code": "IL",
-    "phone_code": "+972"
+    "phone_code": "+972",
+    "flag": "il"
   },
   {
-    "name": "Italy",
+    "name": "ایتالیا",
     "code": "IT",
-    "phone_code": "+39"
+    "phone_code": "+39",
+    "flag": "it"
   },
   {
-    "name": "Jamaica",
+    "name": "جامائیکا",
     "code": "JM",
-    "phone_code": "+1"
+    "phone_code": "+1",
+    "flag": "jm"
   },
   {
-    "name": "Japan",
+    "name": "ژاپن",
     "code": "JP",
-    "phone_code": "+81"
+    "phone_code": "+81",
+    "flag": "jp"
   },
   {
-    "name": "Jordan",
+    "name": "اردن",
     "code": "JO",
-    "phone_code": "+962"
+    "phone_code": "+962",
+    "flag": "jo"
   },
   {
-    "name": "Kazakhstan",
+    "name": "قزاقستان",
     "code": "KZ",
-    "phone_code": "+7"
+    "phone_code": "+7",
+    "flag": "kz"
   },
   {
-    "name": "Kenya",
+    "name": "کنیا",
     "code": "KE",
-    "phone_code": "+254"
+    "phone_code": "+254",
+    "flag": "ke"
   },
   {
-    "name": "Kiribati",
+    "name": "کیریباتی",
     "code": "KI",
-    "phone_code": "+686"
+    "phone_code": "+686",
+    "flag": "ki"
   },
   {
-    "name": "Kosovo",
+    "name": "کوزوو",
     "code": "XK",
-    "phone_code": "+383"
+    "phone_code": "+383",
+    "flag": "xk"
   },
   {
-    "name": "Kuwait",
+    "name": "کویت",
     "code": "KW",
-    "phone_code": "+965"
+    "phone_code": "+965",
+    "flag": "kw"
   },
   {
-    "name": "Kyrgyzstan",
+    "name": "قرقیزستان",
     "code": "KG",
-    "phone_code": "+996"
+    "phone_code": "+996",
+    "flag": "kg"
   },
   {
-    "name": "Laos",
+    "name": "لائوس",
     "code": "LA",
-    "phone_code": "+856"
+    "phone_code": "+856",
+    "flag": "la"
   },
   {
-    "name": "Latvia",
+    "name": "لتونی",
     "code": "LV",
-    "phone_code": "+371"
+    "phone_code": "+371",
+    "flag": "lv"
   },
   {
-    "name": "Lebanon",
+    "name": "لبنان",
     "code": "LB",
-    "phone_code": "+961"
+    "phone_code": "+961",
+    "flag": "lb"
   },
   {
-    "name": "Lesotho",
+    "name": "لسوتو",
     "code": "LS",
-    "phone_code": "+266"
+    "phone_code": "+266",
+    "flag": "ls"
   },
   {
-    "name": "Liberia",
+    "name": "لیبریا",
     "code": "LR",
-    "phone_code": "+231"
+    "phone_code": "+231",
+    "flag": "lr"
   },
   {
-    "name": "Libya",
+    "name": "لیبی",
     "code": "LY",
-    "phone_code": "+218"
+    "phone_code": "+218",
+    "flag": "ly"
   },
   {
-    "name": "Liechtenstein",
+    "name": "لیختن اشتاین",
     "code": "LI",
-    "phone_code": "+423"
+    "phone_code": "+423",
+    "flag": "li"
   },
   {
-    "name": "Lithuania",
+    "name": "لیتوانی",
     "code": "LT",
-    "phone_code": "+370"
+    "phone_code": "الف",
+    "flag": "lt"
   },
   {
-    "name": "Luxembourg",
+    "name": "لوکزامبورگ",
     "code": "LU",
-    "phone_code": "+352"
+    "phone_code": "+352",
+    "flag": "lu"
   },
   {
-    "name": "Macau",
+    "name": "ماکائو",
     "code": "MO",
-    "phone_code": "+853"
+    "phone_code": "+853",
+    "flag": "mo"
   },
   {
-    "name": "Macedonia",
+    "name": "مقدونیه",
     "code": "MK",
-    "phone_code": "+389"
+    "phone_code": "+389",
+    "flag": "mk"
   },
   {
-    "name": "Madagascar",
+    "name": "ماداگاسکار",
     "code": "MG",
-    "phone_code": "+261"
+    "phone_code": "+261",
+    "flag": "mg"
   },
   {
-    "name": "Malawi",
+    "name": "مالاوی",
     "code": "MW",
-    "phone_code": "+265"
+    "phone_code": "+265",
+    "flag": "mw"
   },
   {
-    "name": "Malaysia",
+    "name": "مالزی",
     "code": "MY",
-    "phone_code": "+60"
+    "phone_code": "+60",
+    "flag": "my"
   },
   {
-    "name": "Maldives",
+    "name": "مالدیو",
     "code": "MV",
-    "phone_code": "+960"
+    "phone_code": "+960",
+    "flag": "mv"
   },
   {
-    "name": "Mali",
+    "name": "مال",
     "code": "ML",
-    "phone_code": "+223"
+    "phone_code": "+223",
+    "flag": "ml"
   },
   {
-    "name": "Malta",
+    "name": "مالت",
     "code": "MT",
-    "phone_code": "+356"
+    "phone_code": "+356",
+    "flag": "mt"
   },
   {
-    "name": "Marshall Islands",
+    "name": "جزایر مارشال",
     "code": "MH",
-    "phone_code": "+692"
+    "phone_code": "+692",
+    "flag": "mh"
   },
   {
-    "name": "Martinique",
+    "name": "مارتینیک",
     "code": "MQ",
-    "phone_code": "+596"
+    "phone_code": "+596",
+    "flag": "mq"
   },
   {
-    "name": "Mauritania",
+    "name": "موریتانی",
     "code": "MR",
-    "phone_code": "+222"
+    "phone_code": "+222",
+    "flag": "mr"
   },
   {
-    "name": "Mauritius",
+    "name": "موریس",
     "code": "MU",
-    "phone_code": "+230"
+    "phone_code": "+230",
+    "flag": "mu"
   },
   {
-    "name": "Mayotte",
+    "name": "مایوت",
     "code": "YT",
-    "phone_code": "+262"
+    "phone_code": "+262",
+    "flag": "yt"
   },
   {
-    "name": "Mexico",
+    "name": "مکزیک",
     "code": "MX",
-    "phone_code": "+52"
+    "phone_code": "+52",
+    "flag": "mx"
   },
   {
-    "name": "Moldova",
+    "name": "مولداوی",
     "code": "MD",
-    "phone_code": "+373"
+    "phone_code": "+373",
+    "flag": "md"
   },
   {
-    "name": "Monaco",
+    "name": "موناکو",
     "code": "MC",
-    "phone_code": "+377"
+    "phone_code": "+377",
+    "flag": "mc"
   },
   {
-    "name": "Mongolia",
+    "name": "مغولستان",
     "code": "MN",
-    "phone_code": "+976"
+    "phone_code": "+976",
+    "flag": "mn"
   },
   {
-    "name": "Montenegro",
+    "name": "مونته نگرو",
     "code": "ME",
-    "phone_code": "+382"
+    "phone_code": "+382",
+    "flag": "me"
   },
   {
-    "name": "Montserrat",
+    "name": "مونتسرات",
     "code": "MS",
-    "phone_code": "+1"
+    "phone_code": "+1",
+    "flag": "ms"
   },
   {
-    "name": "Morocco",
+    "name": "مراکش",
     "code": "MA",
-    "phone_code": "+212"
+    "phone_code": "+212",
+    "flag": "ma"
   },
   {
-    "name": "Mozambique",
+    "name": "موزامبیک",
     "code": "MZ",
-    "phone_code": "+258"
+    "phone_code": "+258",
+    "flag": "mz"
   },
   {
-    "name": "Namibia",
+    "name": "نامیبیا",
     "code": "NA",
-    "phone_code": "+264"
+    "phone_code": "+264",
+    "flag": "na"
   },
   {
-    "name": "Nauru",
+    "name": "نائورو",
     "code": "NR",
-    "phone_code": "+674"
+    "phone_code": "+674",
+    "flag": "nr"
   },
   {
-    "name": "Nepal",
+    "name": "نپال",
     "code": "NP",
-    "phone_code": "+977"
+    "phone_code": "+977",
+    "flag": "np"
   },
   {
-    "name": "Netherlands",
+    "name": "هلند",
     "code": "NL",
-    "phone_code": "+31"
+    "phone_code": "+31",
+    "flag": "nl"
   },
   {
-    "name": "Netherlands Antilles",
+    "name": "آنتیل هلند",
     "code": "AN",
-    "phone_code": "+599"
+    "phone_code": "+599",
+    "flag": "an"
   },
   {
-    "name": "New Caledonia",
+    "name": "کالدونیای جدید",
     "code": "NC",
-    "phone_code": "+687"
+    "phone_code": "+687",
+    "flag": "nc"
   },
   {
-    "name": "New Zealand",
+    "name": "نیوزیلند",
     "code": "NZ",
-    "phone_code": "+64"
+    "phone_code": "+64",
+    "flag": "nz"
   },
   {
-    "name": "Nicaragua",
+    "name": "نیکاراگوئه",
     "code": "NI",
-    "phone_code": "+505"
+    "phone_code": "+505",
+    "flag": "ni"
   },
   {
-    "name": "Niger",
+    "name": "نیجر",
     "code": "NE",
-    "phone_code": "+227"
+    "phone_code": "+227",
+    "flag": "ne"
   },
   {
-    "name": "Nigeria",
+    "name": "نیجریه",
     "code": "NG",
-    "phone_code": "+234"
+    "phone_code": "+234",
+    "flag": "ng"
   },
   {
-    "name": "Niue",
+    "name": "نیوئه",
     "code": "NU",
-    "phone_code": "+683"
+    "phone_code": "+683",
+    "flag": "nu"
   },
   {
-    "name": "Norfolk Island",
+    "name": "جزیره نورفولک",
     "code": "NF",
-    "phone_code": "+672"
+    "phone_code": "+672",
+    "flag": "nf"
   },
   {
-    "name": "North Korea",
+    "name": "کره شمالی",
     "code": "KP",
-    "phone_code": "+850"
+    "phone_code": "+850",
+    "flag": "kp"
   },
   {
-    "name": "Northern Mariana Islands",
+    "name": "جزایر ماریانای شمالی",
     "code": "MP",
-    "phone_code": "+1"
+    "phone_code": "+1",
+    "flag": "mp"
   },
   {
-    "name": "Norway",
+    "name": "نروژ",
     "code": "NO",
-    "phone_code": "+47"
+    "phone_code": "+47",
+    "flag": "no"
   },
   {
-    "name": "Oman",
+    "name": "عمان",
     "code": "OM",
-    "phone_code": "+968"
+    "phone_code": "+968",
+    "flag": "om"
   },
   {
-    "name": "Pakistan",
+    "name": "پاکستان",
     "code": "PK",
-    "phone_code": "+92"
+    "phone_code": "+92",
+    "flag": "pk"
   },
   {
-    "name": "Palau",
+    "name": "پالائو",
     "code": "PW",
-    "phone_code": "+680"
+    "phone_code": "+680",
+    "flag": "pw"
   },
   {
-    "name": "Palestine",
+    "name": "فلسطین",
     "code": "PS",
-    "phone_code": "+970"
+    "phone_code": "+970",
+    "flag": "ps"
   },
   {
-    "name": "Panama",
+    "name": "پاناما",
     "code": "PA",
-    "phone_code": "+507"
+    "phone_code": "+507",
+    "flag": "pa"
   },
   {
-    "name": "Papua New Guinea",
+    "name": "پاپوآ گینه نو",
     "code": "PG",
-    "phone_code": "+675"
+    "phone_code": "+675",
+    "flag": "pg"
   },
   {
-    "name": "Paraguay",
+    "name": "پاراگوئه",
     "code": "PY",
-    "phone_code": "+595"
+    "phone_code": "+595",
+    "flag": "py"
   },
   {
-    "name": "Peru",
+    "name": "پرو",
     "code": "PE",
-    "phone_code": "+51"
+    "phone_code": "+51",
+    "flag": "pe"
   },
   {
-    "name": "Philippines",
+    "name": "فیلیپین",
     "code": "PH",
-    "phone_code": "+63"
+    "phone_code": "+63",
+    "flag": "ph"
   },
   {
-    "name": "Poland",
+    "name": "لهستان",
     "code": "PL",
-    "phone_code": "+48"
+    "phone_code": "+48",
+    "flag": "pl"
   },
   {
-    "name": "Portugal",
+    "name": "پرتغال",
     "code": "PT",
-    "phone_code": "+351"
+    "phone_code": "+351",
+    "flag": "pt"
   },
   {
-    "name": "Puerto Rico",
+    "name": "پورتوریکو",
     "code": "PR",
-    "phone_code": "+1"
+    "phone_code": "+1",
+    "flag": "pr"
   },
   {
-    "name": "Qatar",
+    "name": "قطر",
     "code": "QA",
-    "phone_code": "+974"
+    "phone_code": "+974",
+    "flag": "qa"
   },
   {
-    "name": "Republic of the Congo",
+    "name": "جمهوری کنگو",
     "code": "CG",
-    "phone_code": "+242"
+    "phone_code": "+242",
+    "flag": "cg"
   },
   {
-    "name": "Réunion",
+    "name": "رونون",
     "code": "RE",
-    "phone_code": "+262"
+    "phone_code": "+262",
+    "flag": "re"
   },
   {
-    "name": "Romania",
+    "name": "رومانی",
     "code": "RO",
-    "phone_code": "+40"
+    "phone_code": "+40",
+    "flag": "ro"
   },
   {
-    "name": "Russia",
+    "name": "روسیه",
     "code": "RU",
-    "phone_code": "+7"
+    "phone_code": "+7",
+    "flag": "ru"
   },
   {
-    "name": "Rwanda",
+    "name": "رواندا",
     "code": "RW",
-    "phone_code": "+250"
+    "phone_code": "+250",
+    "flag": "rw"
   },
   {
-    "name": "Saint Barthélemy",
+    "name": "سنت بارتلمی",
     "code": "BL",
-    "phone_code": "+590"
+    "phone_code": "+590",
+    "flag": "bl"
   },
   {
-    "name": "Saint Helena",
+    "name": "سنت هلن",
     "code": "SH",
-    "phone_code": "+290"
+    "phone_code": "+290",
+    "flag": "sh"
   },
   {
-    "name": "Saint Kitts and Nevis",
+    "name": "سنت کیتس و نویس",
     "code": "KN",
-    "phone_code": "+1"
+    "phone_code": "+1",
+    "flag": "kn"
   },
   {
-    "name": "Saint Martin",
+    "name": "سنت مارتین",
     "code": "MF",
-    "phone_code": "+590"
+    "phone_code": "+590",
+    "flag": "mf"
   },
   {
-    "name": "Saint Pierre and Miquelon",
+    "name": "سنت پیر و میکلون",
     "code": "PM",
-    "phone_code": "+508"
+    "phone_code": "+508",
+    "flag": "pm"
   },
   {
-    "name": "Saint Vincent and the Grenadines",
+    "name": "سنت وینسنت و گرنادین",
     "code": "VC",
-    "phone_code": "+1"
+    "phone_code": "+1",
+    "flag": "vc"
   },
   {
-    "name": "Samoa",
+    "name": "ساموآ",
     "code": "WS",
-    "phone_code": "+685"
+    "phone_code": "+685",
+    "flag": "ws"
   },
   {
-    "name": "San Marino",
+    "name": "سان مارینو",
     "code": "SM",
-    "phone_code": "+378"
+    "phone_code": "+378",
+    "flag": "sm"
   },
   {
-    "name": "São Tomé and Príncipe",
+    "name": "سائوتومه و پرینسیپ",
     "code": "ST",
-    "phone_code": "+239"
+    "phone_code": "+239",
+    "flag": "st"
   },
   {
-    "name": "Saudi Arabia",
+    "name": "عربستان سعودی",
     "code": "SA",
-    "phone_code": "+966"
+    "phone_code": "+966",
+    "flag": "sa"
   },
   {
-    "name": "Senegal",
+    "name": "سنگال",
     "code": "SN",
-    "phone_code": "+221"
+    "phone_code": "+221",
+    "flag": "sn"
   },
   {
-    "name": "Serbia",
+    "name": "صربستان",
     "code": "RS",
-    "phone_code": "+381"
+    "phone_code": "+381",
+    "flag": "rs"
   },
   {
-    "name": "Seychelles",
+    "name": "سیشل",
     "code": "SC",
-    "phone_code": "+248"
+    "phone_code": "+248",
+    "flag": "sc"
   },
   {
-    "name": "Sierra Leone",
+    "name": "سیرالئون",
     "code": "SL",
-    "phone_code": "+232"
+    "phone_code": "+232",
+    "flag": "sl"
   },
   {
-    "name": "Singapore",
+    "name": "سنگاپور",
     "code": "SG",
-    "phone_code": "+65"
+    "phone_code": "+65",
+    "flag": "sg"
   },
   {
-    "name": "Slovakia",
+    "name": "اسلواکی",
     "code": "SK",
-    "phone_code": "+421"
+    "phone_code": "+421",
+    "flag": "sk"
   },
   {
-    "name": "Slovenia",
+    "name": "اسلوونی",
     "code": "SI",
-    "phone_code": "+386"
+    "phone_code": "+386",
+    "flag": "si"
   },
   {
-    "name": "Solomon Islands",
+    "name": "جزایر سلیمان",
     "code": "SB",
-    "phone_code": "+677"
+    "phone_code": "+677",
+    "flag": "sb"
   },
   {
-    "name": "Somalia",
+    "name": "سومالی",
     "code": "SO",
-    "phone_code": "+252"
+    "phone_code": "+252",
+    "flag": "so"
   },
   {
-    "name": "South Africa",
+    "name": "آفریقای جنوبی",
     "code": "ZA",
-    "phone_code": "+27"
+    "phone_code": "+27",
+    "flag": "za"
   },
   {
-    "name": "South Korea",
+    "name": "کره جنوبی",
     "code": "KR",
-    "phone_code": "+82"
+    "phone_code": "+82",
+    "flag": "kr"
   },
   {
-    "name": "Spain",
+    "name": "اسپانیا",
     "code": "ES",
-    "phone_code": "+34"
+    "phone_code": "+34",
+    "flag": "es"
   },
   {
-    "name": "Sri Lanka",
+    "name": "سریلانکا",
     "code": "LK",
-    "phone_code": "+94"
+    "phone_code": "+94",
+    "flag": "lk"
   },
   {
-    "name": "St. Lucia",
+    "name": "سنت لوسیا",
     "code": "LC",
-    "phone_code": "+1"
+    "phone_code": "+1",
+    "flag": "lc"
   },
   {
-    "name": "Sudan",
+    "name": "سودان",
     "code": "SD",
-    "phone_code": "+249"
+    "phone_code": "+249",
+    "flag": "sd"
   },
   {
-    "name": "Suriname",
+    "name": "سورینیم",
     "code": "SR",
-    "phone_code": "+597"
+    "phone_code": "+597",
+    "flag": "sr"
   },
   {
-    "name": "Swaziland",
+    "name": "سوازیلند",
     "code": "SZ",
-    "phone_code": "+268"
+    "phone_code": "+268",
+    "flag": "sz"
   },
   {
-    "name": "Sweden",
+    "name": "سوئد",
     "code": "SE",
-    "phone_code": "+46"
+    "phone_code": "+46",
+    "flag": "se"
   },
   {
-    "name": "Switzerland",
+    "name": "سوئیس",
     "code": "CH",
-    "phone_code": "+41"
+    "phone_code": "+41",
+    "flag": "ch"
   },
   {
-    "name": "Syria",
+    "name": "سوریه",
     "code": "SY",
-    "phone_code": "+963"
+    "phone_code": "+963",
+    "flag": "sy"
   },
   {
-    "name": "Taiwan",
+    "name": "تایوان",
     "code": "TW",
-    "phone_code": "+886"
+    "phone_code": "+886",
+    "flag": "tw"
   },
   {
-    "name": "Tajikistan",
+    "name": "تاجیکستان",
     "code": "TJ",
-    "phone_code": "+992"
+    "phone_code": "+992",
+    "flag": "tj"
   },
   {
-    "name": "Tanzania",
+    "name": "تانزانیا",
     "code": "TZ",
-    "phone_code": "+255"
+    "phone_code": "+255",
+    "flag": "tz"
   },
   {
-    "name": "Thailand",
+    "name": "تایلند",
     "code": "TH",
-    "phone_code": "+66"
+    "phone_code": "+66",
+    "flag": "th"
   },
   {
-    "name": "The Bahamas",
+    "name": "باهاما",
     "code": "BS",
-    "phone_code": "+1"
+    "phone_code": "+1",
+    "flag": "bs"
   },
   {
-    "name": "The Gambia",
+    "name": "گامبيا",
     "code": "GM",
-    "phone_code": "+220"
+    "phone_code": "+220",
+    "flag": "gm"
   },
   {
-    "name": "Timor-Leste",
+    "name": "جمهوری دموکراتیک تیمور شرقی",
     "code": "TL",
-    "phone_code": "+670"
+    "phone_code": "+670",
+    "flag": "tl"
   },
   {
-    "name": "Togo",
+    "name": "توگو",
     "code": "TG",
-    "phone_code": "+228"
+    "phone_code": "+228",
+    "flag": "tg"
   },
   {
-    "name": "Tokelau",
+    "name": "توکلئو",
     "code": "TK",
-    "phone_code": "+690"
+    "phone_code": "+690",
+    "flag": "tk"
   },
   {
-    "name": "Tonga",
+    "name": "تونگا",
     "code": "TO",
-    "phone_code": "+676"
+    "phone_code": "+676",
+    "flag": "to"
   },
   {
-    "name": "Trinidad and Tobago",
+    "name": "ترینیداد و توباگو",
     "code": "TT",
-    "phone_code": "+1"
+    "phone_code": "+1",
+    "flag": "tt"
   },
   {
-    "name": "Tunisia",
+    "name": "تونس",
     "code": "TN",
-    "phone_code": "+216"
+    "phone_code": "+216",
+    "flag": "tn"
   },
   {
-    "name": "Turkey",
+    "name": "ترکیه",
     "code": "TR",
-    "phone_code": "+90"
+    "phone_code": "+90",
+    "flag": "tr"
   },
   {
-    "name": "Turkmenistan",
+    "name": "ترکمنستان",
     "code": "TM",
-    "phone_code": "+993"
+    "phone_code": "+993",
+    "flag": "tm"
   },
   {
-    "name": "Turks and Caicos Islands",
+    "name": "جزایر ترکس و کایکوس",
     "code": "TC",
-    "phone_code": "+1"
+    "phone_code": "+1",
+    "flag": "tc"
   },
   {
-    "name": "Tuvalu",
+    "name": "توالو",
     "code": "TV",
-    "phone_code": "+688"
+    "phone_code": "+688",
+    "flag": "tv"
   },
   {
-    "name": "Uganda",
+    "name": "اوگاندا",
     "code": "UG",
-    "phone_code": "+256"
+    "phone_code": "+256",
+    "flag": "ug"
   },
   {
-    "name": "Ukraine",
+    "name": "اوکراین",
     "code": "UA",
-    "phone_code": "+380"
+    "phone_code": "+380",
+    "flag": "ua"
   },
   {
-    "name": "United Arab Emirates",
+    "name": "امارات متحده عربی",
     "code": "AE",
-    "phone_code": "+971"
+    "phone_code": "+971",
+    "flag": "ae"
   },
   {
-    "name": "United Kingdom",
+    "name": "بریتانیا",
     "code": "GB",
-    "phone_code": "+44"
+    "phone_code": "+44",
+    "flag": "gb"
   },
   {
-    "name": "United States",
+    "name": "ایالات متحده",
     "code": "US",
-    "phone_code": "+1"
+    "phone_code": "+1",
+    "flag": "us"
   },
   {
-    "name": "Uruguay",
+    "name": "اروگوئه",
     "code": "UY",
-    "phone_code": "+598"
+    "phone_code": "+598",
+    "flag": "uy"
   },
   {
-    "name": "US Virgin Islands",
+    "name": "جزایر ویرجین ایالات متحده",
     "code": "VI",
-    "phone_code": "+1"
+    "phone_code": "+1",
+    "flag": "vi"
   },
   {
-    "name": "Uzbekistan",
+    "name": "ازبکستان",
     "code": "UZ",
-    "phone_code": "+998"
+    "phone_code": "+998",
+    "flag": "uz"
   },
   {
-    "name": "Vanuatu",
+    "name": "وانواتو",
     "code": "VU",
-    "phone_code": "+678"
+    "phone_code": "+678",
+    "flag": "vu"
   },
   {
-    "name": "Vatican City",
+    "name": "شهر واتیکان",
     "code": "VA",
-    "phone_code": "+39"
+    "phone_code": "+39",
+    "flag": "va"
   },
   {
-    "name": "Venezuela",
+    "name": "ونزوئلا",
     "code": "VE",
-    "phone_code": "+58"
+    "phone_code": "+58",
+    "flag": "ve"
   },
   {
-    "name": "Vietnam",
+    "name": "ویتنام",
     "code": "VN",
-    "phone_code": "+84"
+    "phone_code": "+84",
+    "flag": "vn"
   },
   {
-    "name": "Wallis and Futuna",
+    "name": "والیس و فوتونا",
     "code": "WF",
-    "phone_code": "+681"
+    "phone_code": "+681",
+    "flag": "wf"
   },
   {
-    "name": "Yemen",
+    "name": "یمن",
     "code": "YE",
-    "phone_code": "+967"
+    "phone_code": "+967",
+    "flag": "ye"
   },
   {
-    "name": "Zambia",
+    "name": "زامبیا",
     "code": "ZM",
-    "phone_code": "+260"
+    "phone_code": "+260",
+    "flag": "zm"
   },
   {
-    "name": "Zimbabwe",
+    "name": "زیمبابوه",
     "code": "ZW",
-    "phone_code": "+263"
+    "phone_code": "+263",
+    "flag": "zw"
+  },
+  {
+    "name": "قطب جنوب",
+    "code": "AQ",
+    "phone_code": "+672",
+    "flag": "aq"
+  },
+  {
+    "name": "جزایر کوکوس",
+    "code": "CC",
+    "phone_code": "+61",
+    "flag": "cc"
+  },
+  {
+    "name": "کوراسائو",
+    "code": "CW",
+    "phone_code": "+599",
+    "flag": "cw"
+  },
+  {
+    "name": "جزیره کریسمس",
+    "code": "CX",
+    "phone_code": "+61",
+    "flag": "cx"
+  },
+  {
+    "name": "صحرای غربی",
+    "code": "EH",
+    "phone_code": "+212",
+    "flag": "eh"
+  },
+  {
+    "name": "گورنسی",
+    "code": "GG",
+    "phone_code": "+44-1481",
+    "flag": "gg"
+  },
+  {
+    "name": "جزیره مرد",
+    "code": "IM",
+    "phone_code": "+44-1624",
+    "flag": "im"
+  },
+  {
+    "name": "جرسی",
+    "code": "JE",
+    "phone_code": "+44-1534",
+    "flag": "je"
+  },
+  {
+    "name": "پیتکرن",
+    "code": "PN",
+    "phone_code": "+64",
+    "flag": "pn"
+  },
+  {
+    "name": "سوالبارد و یان ماین",
+    "code": "SJ",
+    "phone_code": "+47",
+    "flag": "sj"
+  },
+  {
+    "name": "سودان جنوبی",
+    "code": "SS",
+    "phone_code": "+211",
+    "flag": "ss"
+  },
+  {
+    "name": "سینت مارتن",
+    "code": "SX",
+    "phone_code": "+1-721",
+    "flag": "sx"
+  },
+  {
+    "name": "چاد",
+    "code": "TD",
+    "phone_code": "+235",
+    "flag": "td"
   }
 ]

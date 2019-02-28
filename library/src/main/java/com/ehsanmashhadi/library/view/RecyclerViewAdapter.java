@@ -70,6 +70,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             } else {
                 holder.itemView.setSelected(false);
             }
+        if (sShowingFlag)
+            holder.mImageViewFlag.setVisibility(View.VISIBLE);
+        else
+            holder.mImageViewFlag.setVisibility(View.GONE);
     }
 
     @Override

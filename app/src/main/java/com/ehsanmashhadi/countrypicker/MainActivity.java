@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
                 getBaseContext().getResources().getDisplayMetrics());
 
 
-        CountryPicker countryPicker = new CountryPicker.Builder(this).showingDialCode(false).setPreSelectedCountry("guam").showingFlag(false)
+        CountryPicker countryPicker = new CountryPicker.Builder(this).showingDialCode(true).setPreSelectedCountry("guam").showingFlag(true)
                 .sortBy(CountryPicker.Sort.NONE).setViewType(CountryPicker.ViewType.BOTTOMSHEET).enablingSearch(true).setListener(country ->
                         Toast.makeText(this, country.getName(), Toast.LENGTH_LONG).show()).enableAutoDetectCountry(CountryPicker.DetectionMethod.LOCALE, country -> {
                     Toast.makeText(this, country.getName(), Toast.LENGTH_LONG).show();

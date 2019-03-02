@@ -30,7 +30,7 @@ public class CountryPicker implements CountryPickerContractor.View {
         void onCountryDetected(Country country);
     }
 
-    private Sort mSort;
+    private Sort mSort = Sort.NONE;
     private ViewType mViewType;
     private boolean mShowingFlag = true;
     private boolean mEnablingSearch = true;
@@ -45,7 +45,7 @@ public class CountryPicker implements CountryPickerContractor.View {
     private RecyclerView mRecyclerView;
     private SearchView mSearchViewCountry;
     private int mStyle;
-    private DetectionMethod mDetectionMethod;
+    private DetectionMethod mDetectionMethod = DetectionMethod.NONE;
 
     private RecyclerViewAdapter.OnCountryClickListener mOnCountryClickListener;
     private OnAutoDetectCountryListener mOnAutoDetectCountryListener;
@@ -56,7 +56,7 @@ public class CountryPicker implements CountryPickerContractor.View {
 
     }
 
-    public CountryPicker(Builder builder) {
+    private CountryPicker(Builder builder) {
 
         initAttributes(builder);
         mPresenter = new CountryPickerPresenter(new ResourceCountryRepository(builder.mContext.getResources()), this);
@@ -109,6 +109,11 @@ public class CountryPicker implements CountryPickerContractor.View {
         mRecyclerView.setAdapter(recyclerViewAdapter);
         mRecyclerView.setLayoutManager(layoutManager);
 
+    }
+
+    public List<Country> getCountries() {
+
+        return mCountries;
     }
 
     private void initSearchView() {
@@ -255,7 +260,7 @@ public class CountryPicker implements CountryPickerContractor.View {
         private boolean mEnablingSearch;
         private boolean mShowingDialCode;
         private String mPreSelectedCountry;
-        private DetectionMethod mDetectionMethod;
+        private DetectionMethod mDetectionMethod = DetectionMethod.NONE;
         private Sort mSort = Sort.NONE;
         private RecyclerViewAdapter.OnCountryClickListener mOnCountryClickListener;
         private OnAutoDetectCountryListener mOnAutoDetectCountryListener;
@@ -302,7 +307,7 @@ public class CountryPicker implements CountryPickerContractor.View {
             return this;
         }
 
-        public Builder setListener(RecyclerViewAdapter.OnCountryClickListener onCountryClickListener) {
+        public Builder setCountrySelectionListener(RecyclerViewAdapter.OnCountryClickListener onCountryClickListener) {
 
             mOnCountryClickListener = onCountryClickListener;
             return this;
@@ -367,6 +372,7 @@ public class CountryPicker implements CountryPickerContractor.View {
     }
 
     public enum DetectionMethod {
+        NONE,
         LOCALE,
         SIM,
         NETWORK

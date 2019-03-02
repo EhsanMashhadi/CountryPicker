@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">CountryPicker</string>
+    <string-array name="all_sortby">
+        <item>NONE</item>
+        <item>COUNTRY</item>
+        <item>CODE</item>
+    </string-array>
+
+    <string-array name="all_viewtype">
+        <item>DIALOG</item>
+        <item>BOTTOMSHEET</item>
+    </string-array>
+
+    <string-array name="all_locale">
+        <item>EN</item>
+        <item>FA</item>
+    </string-array>
+
+
 </resources>

@@ -1453,7 +1453,8 @@
   },
   {
     "name": "Sint Maarten",
-    "phone_code": "+1-721",
+    "code": "SX",
+    "phone_code": "+1",
     "flag": "sx"
   },
   {

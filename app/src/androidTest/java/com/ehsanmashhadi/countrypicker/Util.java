@@ -1,10 +1,13 @@
 package com.ehsanmashhadi.countrypicker;
 
+import android.annotation.SuppressLint;
 import android.support.test.espresso.UiController;
 import android.support.test.espresso.ViewAction;
 import android.view.View;
 
+import org.hamcrest.Description;
 import org.hamcrest.Matcher;
+import org.hamcrest.TypeSafeMatcher;
 
 import androidx.appcompat.widget.SearchView;
 
@@ -33,6 +36,31 @@ public class Util {
             public void perform(UiController uiController, View view) {
 
                 ((SearchView) view).setQuery(text, false);
+            }
+        };
+    }
+
+    public static Matcher<View> withIndex(final int index, final Matcher<View> matcher) {
+
+        return new TypeSafeMatcher<View>() {
+            int currentIndex;
+            int viewObjHash;
+
+            @SuppressLint("DefaultLocale")
+            @Override
+            public void describeTo(Description description) {
+
+                description.appendText(String.format("with index: %d ", index));
+                matcher.describeTo(description);
+            }
+
+            @Override
+            public boolean matchesSafely(View view) {
+
+                if (matcher.matches(view) && currentIndex++ == index) {
+                    viewObjHash = view.hashCode();
+                }
+                return view.hashCode() == viewObjHash;
             }
         };
     }

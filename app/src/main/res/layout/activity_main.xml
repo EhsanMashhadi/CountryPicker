@@ -4,56 +4,110 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="left"
+    android:layout_margin="10dp"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
-    <Switch
-        android:id="@+id/switch_flags"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Show flags"/>
+        android:orientation="horizontal">
 
-    <Switch
-        android:id="@+id/switch_dialcodes"
-        android:layout_width="wrap_content"
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <Switch
+                android:id="@+id/switch_flags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show flags"/>
+
+            <Switch
+                android:id="@+id/switch_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Enable search"/>
+
+            <Switch
+                android:id="@+id/switch_dialcodes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Show dial codes"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spinner_locale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/all_locale"/>
+
+            <Spinner
+                android:id="@+id/spinner_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:entries="@array/all_style"/>
+
+            <Spinner
+                android:id="@+id/spinner_sort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:entries="@array/all_sortby"/>
+
+            <Spinner
+                android:id="@+id/spinner_viewtype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:entries="@array/all_viewtype"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edittext_preselectedcountry"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Show dial codes"/>
+        android:layout_marginTop="10dp"
+        android:hint="Preselected Country"/>
 
-    <Switch
-        android:id="@+id/switch_search"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/edittext_exceptcountries"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enable search"/>
+        android:layout_marginTop="10dp"
 
-    <Spinner
-        android:id="@+id/spinner_sort"
-        android:layout_width="wrap_content"
+        android:hint="Except Countries Seperated By Comma"/>
+
+    <EditText
+        android:id="@+id/edittext_wantedcountries"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/all_sortby"/>
+        android:layout_marginTop="10dp"
+        android:hint="Wanted Countries Seperated By Comma"/>
 
-    <Spinner
-        android:id="@+id/spinner_viewtype"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:entries="@array/all_viewtype"/>
-
-    <Spinner
-        android:id="@+id/spinner_preselectedcountry"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <Spinner
-        android:id="@+id/spinner_locale"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:entries="@array/all_locale"/>
 
     <Button
         android:id="@+id/button_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
         android:text="Display"/>
 
 </LinearLayout>

@@ -4,6 +4,8 @@
         <item>NONE</item>
         <item>COUNTRY</item>
         <item>CODE</item>
+        <item>DIALCODE</item>
+
     </string-array>
 
     <string-array name="all_viewtype">
@@ -16,5 +18,9 @@
         <item>FA</item>
     </string-array>
 
+    <string-array name="all_style">
+        <item>CountryPickerLightStyle</item>
+        <item>CountryPickerDarkStyle</item>
+    </string-array>
 
 </resources>

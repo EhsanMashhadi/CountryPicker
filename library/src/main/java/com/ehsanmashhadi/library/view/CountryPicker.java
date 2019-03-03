@@ -64,6 +64,7 @@ public class CountryPicker implements CountryPickerContractor.View {
         initView();
         initCountries();
         sort();
+        setPreselectedCountry();
         initSearchView();
         initDetectionMethod();
     }
@@ -71,6 +72,19 @@ public class CountryPicker implements CountryPickerContractor.View {
     private void sort() {
 
         mPresenter.sort(mSort);
+    }
+
+    private void setPreselectedCountry() {
+
+        ((RecyclerViewAdapter) mRecyclerView.getAdapter()).setCountries(mCountries);
+        if (mPreSelectedCountry != null) {
+            for (Country country : mCountries) {
+                if (country.getName().toLowerCase().equals(mPreSelectedCountry.toLowerCase())) {
+                    mRecyclerView.scrollToPosition(mCountries.indexOf(country));
+                    break;
+                }
+            }
+        }
     }
 
     private void initAttributes(Builder builder) {
@@ -242,16 +256,7 @@ public class CountryPicker implements CountryPickerContractor.View {
         } else {
             mCountries = countries;
         }
-
         ((RecyclerViewAdapter) mRecyclerView.getAdapter()).setCountries(mCountries);
-        if (mPreSelectedCountry != null) {
-            for (Country country : mCountries) {
-                if (country.getName().toLowerCase().equals(mPreSelectedCountry.toLowerCase())) {
-                    mRecyclerView.scrollToPosition(mCountries.indexOf(country));
-                    break;
-                }
-            }
-        }
     }
 
     public static class Builder {
@@ -348,7 +353,7 @@ public class CountryPicker implements CountryPickerContractor.View {
         public Builder setCountries(List<String> countries) {
 
             if (countries == null || countries.size() < 1) {
-                throw new UnsupportedOperationException("Country list should contain at least one country");
+                return this;
             }
             mCountries = countries;
             return this;
@@ -363,7 +368,8 @@ public class CountryPicker implements CountryPickerContractor.View {
     public enum Sort {
         NONE,
         COUNTRY,
-        CODE
+        CODE,
+        DIALCODE
     }
 
     public enum ViewType {

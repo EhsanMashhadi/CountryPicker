@@ -82,7 +82,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return mCountryList.size();
     }
 
-    public void setCountries(List<Country> countries) {
+    void setCountries(List<Country> countries) {
 
         mCountryList = countries;
         notifyDataSetChanged();

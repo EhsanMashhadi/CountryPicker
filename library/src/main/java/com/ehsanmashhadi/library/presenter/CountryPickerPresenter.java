@@ -71,6 +71,12 @@ public class CountryPickerPresenter implements CountryPickerContractor.Presenter
                 Collections.sort(mCountries, comparator);
                 break;
             }
+
+            case DIALCODE: {
+                Comparator<Country> comparator = (o1, o2) -> o1.getDialCode().compareTo(o2.getDialCode());
+                Collections.sort(mCountries, comparator);
+                break;
+            }
         }
     }
 }

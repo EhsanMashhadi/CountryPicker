@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="countryNameColorOnDark">#FFFFFF</color>
+    <color name="dialCodeColorOnDark">#FFFFFF</color>
+    <color name="rowBackgroundColorDark">#000000</color>
+    <color name="rowBackgroundSelectedColorDark">#232323</color>
+
+    <color name="countryNameColorOnLight">#000000</color>
+    <color name="dialCodeColorOnLight">#000000</color>
+    <color name="rowBackgroundColorLight">#FFFFFF</color>
+    <color name="rowBackgroundSelectedColorLight">#d7d5d5</color>
+
+
+</resources>

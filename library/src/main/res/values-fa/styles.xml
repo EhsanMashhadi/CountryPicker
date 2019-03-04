@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextStyle" parent="BaseTextStyle">
+        <item name="fontFamily">@font/iran_sans_medium</item>
+        <item name="android:fontFamily">@font/iran_sans_medium</item>
+    </style>
+
+    <style name="CountryTextStyle" parent="BaseCountryTextStyle">
+        <item name="fontFamily">@font/iran_sans_medium</item>
+        <item name="android:fontFamily">@font/iran_sans_medium</item>
+    </style>
+
+    <style name="DialCodeTextStyle" parent="BaseDialCodeTextStyle">
+        <item name="fontFamily">@font/iran_sans_medium</item>
+        <item name="android:fontFamily">@font/iran_sans_medium</item>
+    </style>
+
+</resources>

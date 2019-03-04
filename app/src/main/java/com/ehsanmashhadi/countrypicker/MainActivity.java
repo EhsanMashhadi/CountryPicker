@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private Spinner mSpinnerViewType;
     private Spinner mSpinnerLocale;
     private Spinner mSpinnerStyle;
+    private Spinner mSpinnerDetectionMethod;
 
     private EditText mEditTextPreselectedCountry;
     private EditText mEditTextExceptCountries;
@@ -46,9 +47,8 @@ public class MainActivity extends AppCompatActivity {
 
         mEditTextExceptCountries = findViewById(R.id.edittext_exceptcountries);
         mEditTextWantedCountries = findViewById(R.id.edittext_wantedcountries);
-        button.setOnClickListener(v -> {
-            display();
-        });
+        mSpinnerDetectionMethod = findViewById(R.id.spinner_detectionmethod);
+        button.setOnClickListener(v -> display());
     }
 
     private void display() {
@@ -59,8 +59,10 @@ public class MainActivity extends AppCompatActivity {
                 .setViewType(CountryPicker.ViewType.valueOf(mSpinnerViewType.getSelectedItem().toString())).enablingSearch(mSwitchSearch.isChecked())
                 .setCountries(mEditTextWantedCountries.getText().toString().length() > 0 ? Arrays.asList(mEditTextWantedCountries.getText().toString().split(",")) : null)
                 .exceptCountriesName(Arrays.asList(mEditTextExceptCountries.getText().toString().trim().split(",")))
-                .setCountrySelectionListener(country -> Toast.makeText(this, country.getName(), Toast.LENGTH_LONG).show())
+                .setCountrySelectionListener(country -> Toast.makeText(this, "Selected Country: " + country.getName(), Toast.LENGTH_LONG).show())
                 .setStyle(getResources().getIdentifier(mSpinnerStyle.getSelectedItem().toString(), "style", getPackageName()))
+                .enableAutoDetectCountry(CountryPicker.DetectionMethod.valueOf(mSpinnerDetectionMethod.getSelectedItem().toString())
+                        , country -> Toast.makeText(this, "Detected Country: " + country.getName(), Toast.LENGTH_LONG).show())
                 .build();
         countryPicker.show(this);
     }

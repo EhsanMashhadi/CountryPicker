@@ -5,77 +5,144 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
+    android:layoutDirection="ltr"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
 
+        <Switch
+            android:id="@+id/switch_flags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Show flags"/>
 
-        <LinearLayout
+        <Switch
+            android:id="@+id/switch_dialcodes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:text="Show dial codes"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Switch
+            android:id="@+id/switch_search"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="start"
-            android:orientation="vertical">
+            android:text="Enable search"/>
+    </LinearLayout>
 
-            <Switch
-                android:id="@+id/switch_flags"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Show flags"/>
-
-            <Switch
-                android:id="@+id/switch_search"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Enable search"/>
-
-            <Switch
-                android:id="@+id/switch_dialcodes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Show dial codes"/>
-        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="start"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="start"
-            android:orientation="vertical">
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Language"/>
 
             <Spinner
                 android:id="@+id/spinner_locale"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:entries="@array/all_locale"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Style: "/>
 
             <Spinner
                 android:id="@+id/spinner_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:entries="@array/all_style"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sort by: "/>
 
             <Spinner
                 android:id="@+id/spinner_sort"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:entries="@array/all_sortby"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View type: "/>
 
             <Spinner
                 android:id="@+id/spinner_viewtype"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:entries="@array/all_viewtype"/>
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Country auth detetion method:"/>
+
+            <Spinner
+                android:id="@+id/spinner_detectionmethod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/all_detectionmethod"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -100,7 +167,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:hint="Wanted Countries Seperated By Comma"/>
-
 
     <Button
         android:id="@+id/button_display"

@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">CountryPicker</string>
+
     <string-array name="all_sortby">
         <item>NONE</item>
         <item>COUNTRY</item>
         <item>CODE</item>
         <item>DIALCODE</item>
-
     </string-array>
 
     <string-array name="all_viewtype">
@@ -21,6 +21,13 @@
     <string-array name="all_style">
         <item>CountryPickerLightStyle</item>
         <item>CountryPickerDarkStyle</item>
+    </string-array>
+
+    <string-array name="all_detectionmethod">
+        <item>NONE</item>
+        <item>LOCALE</item>
+        <item>NETWORK</item>
+        <item>SIM</item>
     </string-array>
 
 </resources>

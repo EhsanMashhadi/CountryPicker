@@ -1,5 +1,7 @@
 package com.ehsanmashhadi.library.view;
 
+import android.content.res.Resources;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +13,7 @@ import com.ehsanmashhadi.library.model.Country;
 
 import java.util.List;
 
+import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -45,6 +48,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public CountryHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_country, parent, false);
+
         return new CountryHolder(itemView, position -> {
             mOnCountryClickListener.onCountrySelected(mCountryList.get(position));
             itemView.setSelected(true);
@@ -66,8 +70,20 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         if (sPreselectCountry != null)
             if (mCountryList.get(position).getName().toLowerCase().equals(sPreselectCountry.toLowerCase())) {
                 holder.itemView.setSelected(true);
+                //Not setting background in XML because of not supporting reference attributes in pre-lollipop Android version
+                TypedValue typedValue = new TypedValue();
+                Resources.Theme theme = holder.itemView.getContext().getTheme();
+                theme.resolveAttribute(R.attr.rowBackgroundSelectedColor, typedValue, true);
+                @ColorInt int color = typedValue.data;
+                holder.itemView.setBackgroundColor(color);
+
             } else {
                 holder.itemView.setSelected(false);
+                TypedValue typedValue = new TypedValue();
+                Resources.Theme theme = holder.itemView.getContext().getTheme();
+                theme.resolveAttribute(R.attr.rowBackgroundColor, typedValue, true);
+                @ColorInt int color = typedValue.data;
+                holder.itemView.setBackgroundColor(color);
             }
         if (sShowingFlag)
             holder.mImageViewFlag.setVisibility(View.VISIBLE);

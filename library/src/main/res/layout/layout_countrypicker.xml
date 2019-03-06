@@ -13,6 +13,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_countries"
         android:layout_width="match_parent"
+        android:background="?rowBackgroundColor"
         android:layout_height="match_parent"
         android:layout_below="@id/searchview_country"/>
 

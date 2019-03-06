@@ -137,6 +137,8 @@ public class CountryPicker implements CountryPickerContractor.View {
     private void initSearchView() {
 
         mSearchViewCountry = mView.findViewById(R.id.searchview_country);
+        mSearchViewCountry.setOnClickListener(v -> mSearchViewCountry.setIconified(false));
+
         if (mEnablingSearch) {
             mSearchViewCountry.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
                 @Override

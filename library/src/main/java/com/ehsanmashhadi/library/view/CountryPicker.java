@@ -46,7 +46,7 @@ public class CountryPicker implements CountryPickerContractor.View {
     private SearchView mSearchViewCountry;
     private int mStyle;
     private DetectionMethod mDetectionMethod = DetectionMethod.NONE;
-
+    private BaseView mBaseView;
     private RecyclerViewAdapter.OnCountryClickListener mOnCountryClickListener;
     private OnAutoDetectCountryListener mOnAutoDetectCountryListener;
     private View mView;
@@ -114,10 +114,14 @@ public class CountryPicker implements CountryPickerContractor.View {
         LayoutInflater layoutInflater = LayoutInflater.from(mContext);
         mView = layoutInflater.inflate(R.layout.layout_countrypicker, null);
         mRecyclerView = mView.findViewById(R.id.recyclerview_countries);
+
         mRecyclerView.addItemDecoration(new DividerItemDecoration(mContext, DividerItemDecoration.VERTICAL));
         RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(mCountries, mPreSelectedCountry, mShowingFlag, mShowingDialCode);
         if (mOnCountryClickListener != null)
-            recyclerViewAdapter.setListener(mOnCountryClickListener);
+            recyclerViewAdapter.setListener(country -> {
+                mOnCountryClickListener.onCountrySelected(country);
+                dismiss();
+            });
         LinearLayoutManager layoutManager = new LinearLayoutManager(mContext);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setAdapter(recyclerViewAdapter);
@@ -236,8 +240,14 @@ public class CountryPicker implements CountryPickerContractor.View {
 
     public void show(AppCompatActivity activity) {
 
-        BaseView baseView = ViewFactory.create(mViewType, activity);
-        baseView.showView(mView);
+        mBaseView = ViewFactory.create(mViewType, activity);
+        mBaseView.showView(mView);
+
+    }
+
+    public void dismiss() {
+
+        mBaseView.dismissView();
     }
 
     @Override

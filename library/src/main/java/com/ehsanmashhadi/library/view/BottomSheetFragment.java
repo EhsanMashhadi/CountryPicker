@@ -36,6 +36,13 @@ public class BottomSheetFragment extends BottomSheetDialogFragment implements Ba
         this.show(mActivityCompat.getSupportFragmentManager(), "bottomsheet");
     }
 
+    @Override
+    public void dismissView() {
+
+        this.dismiss();
+    }
+
+
     public void setActivity(AppCompatActivity appCompatActivity) {
 
         mActivityCompat = appCompatActivity;

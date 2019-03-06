@@ -6,8 +6,7 @@
 Powerful country picker for Android.
 
 
-<img src="https://github.com/EhsanMashhadi/CountryPicker/blob/master/art/english_bottomsheet.png" width="250">     <img src="https://github.com/EhsanMashhadi/CountryPicker/blob/master/art/persian_dialog.png" width="250">
-
+![CountryPicker](https://github.com/EhsanMashhadi/CountryPicker/blob/master/art/countrypicker.gif?raw=true)
 ## Download
 
 1. **Add the JitPack repository to your build file**

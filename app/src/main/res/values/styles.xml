@@ -8,4 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="CountryPickerCustomStyle">
+        <item name="countryNameColor">@color/colorBlue</item>
+        <item name="dialCodeColor">@color/colorBlue</item>
+        <item name="rowBackgroundColor">@color/colorWhite</item>
+        <item name="rowBackgroundSelectedColor">@color/colorGrey</item>
+    </style>
+
 </resources>

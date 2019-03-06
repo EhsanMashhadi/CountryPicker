@@ -18,4 +18,10 @@ class MyDialog extends android.app.Dialog implements BaseView {
         this.setContentView(view);
         show();
     }
+
+    @Override
+    public void dismissView() {
+
+        this.dismiss();
+    }
 }

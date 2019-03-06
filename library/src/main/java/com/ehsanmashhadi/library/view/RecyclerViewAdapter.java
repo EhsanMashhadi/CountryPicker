@@ -18,7 +18,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public interface OnCountryClickListener {
         void onCountrySelected(Country country);
-
     }
 
     private List<Country> mCountryList;

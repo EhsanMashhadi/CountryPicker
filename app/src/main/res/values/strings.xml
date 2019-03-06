@@ -21,6 +21,7 @@
     <string-array name="all_style">
         <item>CountryPickerLightStyle</item>
         <item>CountryPickerDarkStyle</item>
+        <item>CountryPickerCustomStyle</item>
     </string-array>
 
     <string-array name="all_detectionmethod">

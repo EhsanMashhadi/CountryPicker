@@ -30,7 +30,7 @@ Add in in your app module level build.gradle
 ```
 ## How to use
 
-### Simple usage:
+### Simple usage
 ```
     CountryPicker countryPicker = new CountryPicker.Builder(this)
     .setCountrySelectionListener(country ->
@@ -53,7 +53,6 @@ Add in in your app module level build.gradle
 ```
 
 ### Sort by
-#### Sort method :
 - COUNTRY
 - DIALCODE
 - CODE
@@ -66,7 +65,6 @@ Add in in your app module level build.gradle
 ```
 
 ### View type
-#### View type :
 - DIALOG
 - BOTTOMSHEET
 ```
@@ -75,7 +73,6 @@ Add in in your app module level build.gradle
 ```
 
 ### Language
-#### Language :
 - EN
 - FA
 ```
@@ -89,7 +86,6 @@ Add in in your app module level build.gradle
 ```
 
 ### Style
-#### Style :
 - CountryPickerLightStyle
 - CountryPickerDarkStyle
 ```
@@ -97,6 +93,19 @@ Add in in your app module level build.gradle
     countryPicker.setStyle(R.style.CountryPickerDarkStyle);
 ```
 
+For using custom theme you can declare style in style.xml
+```
+    <style name="CountryPickerCustomStyle">
+        <item name="countryNameColor">@color/colorBlue</item>
+        <item name="dialCodeColor">@color/colorBlue</item>
+        <item name="rowBackgroundColor">@color/colorWhite</item>
+        <item name="rowBackgroundSelectedColor">@color/colorGrey</item>
+    </style>
+```
+and then:
+```
+    countryPicker.setStyle(R.style.CountryPickerCustomStyle);
+```
 ### Except countries
 ```
     List<String> countries = new ArrayList();
@@ -114,7 +123,6 @@ Add in in your app module level build.gradle
 ```
 
 ### Auto detect country
-#### Detection method :
 - Locale
 - Sim
 - Network

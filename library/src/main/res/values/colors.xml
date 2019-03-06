@@ -2,7 +2,7 @@
 <resources>
     <color name="countryNameColorOnDark">#FFFFFF</color>
     <color name="dialCodeColorOnDark">#FFFFFF</color>
-    <color name="rowBackgroundColorDark">#000000</color>
+    <color name="rowBackgroundColorDark">#202932</color>
     <color name="rowBackgroundSelectedColorDark">#232323</color>
 
     <color name="countryNameColorOnLight">#000000</color>

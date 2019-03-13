@@ -25,7 +25,7 @@ Powerful country picker for Android.
 Add in in your app module level build.gradle
 ```
     dependencies {
-        implementation 'com.github.EhsanMashhadi:CountryPicker:0.3.0'
+        implementation 'com.github.EhsanMashhadi:CountryPicker:0.4.0'
     }
 ```
 ## How to use

@@ -32,9 +32,16 @@ Add in in your app module level build.gradle
 
 ### Simple usage
 ```
-    CountryPicker countryPicker = new CountryPicker.Builder(this)
-    .setCountrySelectionListener(country ->
-    Toast.makeText(this, "Selected Country: " + country.getName(), Toast.LENGTH_LONG).show())
+     CountryPicker countryPicker = new CountryPicker.Builder(this).setCountrySelectionListener(new RecyclerViewAdapter.OnCountryClickListener() {
+
+                @Override
+                public void onCountrySelected(Country country) {
+
+                    Toast.makeText(MainActivity.this, "Selected Country: " + country.getName(), Toast.LENGTH_LONG).show();
+                }
+            }).build();
+
+      countryPicker.show(this);
 ```
 
 ### Showing flag

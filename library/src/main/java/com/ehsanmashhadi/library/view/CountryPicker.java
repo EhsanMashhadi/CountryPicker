@@ -30,11 +30,11 @@ public class CountryPicker implements CountryPickerContractor.View {
         void onCountryDetected(Country country);
     }
 
-    private Sort mSort = Sort.NONE;
+    private Sort mSort;
     private ViewType mViewType;
-    private boolean mShowingFlag = true;
-    private boolean mEnablingSearch = true;
-    private boolean mShowingDialCode = true;
+    private boolean mShowingFlag;
+    private boolean mEnablingSearch;
+    private boolean mShowingDialCode;
     private String mPreSelectedCountry;
 
     private Context mContext;
@@ -45,7 +45,7 @@ public class CountryPicker implements CountryPickerContractor.View {
     private RecyclerView mRecyclerView;
     private SearchView mSearchViewCountry;
     private int mStyle;
-    private DetectionMethod mDetectionMethod = DetectionMethod.NONE;
+    private DetectionMethod mDetectionMethod;
     private BaseView mBaseView;
     private RecyclerViewAdapter.OnCountryClickListener mOnCountryClickListener;
     private OnAutoDetectCountryListener mOnAutoDetectCountryListener;
@@ -287,7 +287,7 @@ public class CountryPicker implements CountryPickerContractor.View {
         private Locale mLocale;
         private List<String> mExceptCountries;
         private int mStyle;
-        private ViewType mViewType;
+        private ViewType mViewType = ViewType.DIALOG;
 
         public Builder(Context context) {
 

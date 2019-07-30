@@ -12,7 +12,7 @@ Powerful country picker for Android.
 1. **Add the JitPack repository to your build file**
 
  Add it in your project level build.gradle:
-```
+```gradle
     allprojects {
         repositories {
             ...
@@ -23,7 +23,7 @@ Powerful country picker for Android.
 
 2. **Add the dependency**
 Add in in your app module level build.gradle
-```
+```gradle
     dependencies {
         implementation 'com.github.EhsanMashhadi:CountryPicker:0.4.0'
     }
@@ -31,7 +31,7 @@ Add in in your app module level build.gradle
 ## How to use
 
 ### Simple usage
-```
+```JAVA
      CountryPicker countryPicker = new CountryPicker.Builder(this).setCountrySelectionListener(new RecyclerViewAdapter.OnCountryClickListener() {
 
                 @Override
@@ -45,17 +45,17 @@ Add in in your app module level build.gradle
 ```
 
 ### Showing flag
-```
+```JAVA
     countryPicker.showingFlag(true);
 ```
 
 ### Showing dial code
-```
+```JAVA
     countryPicker.showingDialCode(true);
 ```
 
 ### Showing search
-```
+```JAVA
     countryPicker.enablingSearch(true);
 ```
 
@@ -64,44 +64,44 @@ Add in in your app module level build.gradle
 - DIALCODE
 - CODE
 - NONE
-```
-    countryPicker.sortBy(COUNTRY);
-    countryPicker.sortBy(DIALCODE);
-    countryPicker.sortBy(CODE);
-    countryPicker.sortBy(NONE);
+```JAVA
+    countryPicker.sortBy(CountryPicker.Sort.COUNTRY);
+    countryPicker.sortBy(CountryPicker.Sort.DIALCODE);
+    countryPicker.sortBy(CountryPicker.Sort.CODE);
+    countryPicker.sortBy(CountryPicker.Sort.NONE);
 ```
 
 ### View type
 - DIALOG
 - BOTTOMSHEET
-```
-    countryPicker.setViewType(DIALOG);
-    countryPicker.setViewType(BOTTOMSHEET);
+```JAVA
+    countryPicker.setViewType(CountryPicker.ViewType.DIALOG);
+    countryPicker.setViewType(CountryPicker.ViewType.BOTTOMSHEET);
 ```
 
 ### Language
 - EN
 - FA
-```
+```JAVA
    countryPicker.setLocale(new Locale("EN"));
    countryPicker.setLocale(new Locale("FA"));
 ```
 
 ### Preselected country
-```
+```JAVA
     countryPicker.setPreSelectedCountry("iran");
 ```
 
 ### Style
 - CountryPickerLightStyle
 - CountryPickerDarkStyle
-```
+```JAVA
     countryPicker.setStyle(R.style.CountryPickerLightStyle);
     countryPicker.setStyle(R.style.CountryPickerDarkStyle);
 ```
 
 For using custom theme you can declare style in style.xml
-```
+```JAVA
     <style name="CountryPickerCustomStyle">
         <item name="countryNameColor">@color/colorBlue</item>
         <item name="dialCodeColor">@color/colorBlue</item>
@@ -110,11 +110,11 @@ For using custom theme you can declare style in style.xml
     </style>
 ```
 and then:
-```
+```JAVA
     countryPicker.setStyle(R.style.CountryPickerCustomStyle);
 ```
 ### Except countries
-```
+```JAVA
     List<String> countries = new ArrayList();
     countries.add("Germany");
     countries.add("Italy");
@@ -122,7 +122,7 @@ and then:
 ```
 
 ### Set countries
-```
+```JAVA
     List<String> countries = new ArrayList();
     countries.add("Germany");
     countries.add("Italy");
@@ -134,7 +134,7 @@ and then:
 - Sim
 - Network
 
-```
+```JAVA
     countryPicker.enableAutoDetectCountry(CountryPicker.DetectionMethod.LOCALE
         , country -> Toast.makeText(this, "Detected Country: " + country.getName()
             , Toast.LENGTH_LONG).show())

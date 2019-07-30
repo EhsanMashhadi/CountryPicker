@@ -65,18 +65,18 @@ Add in in your app module level build.gradle
 - CODE
 - NONE
 ```JAVA
-    countryPicker.sortBy(COUNTRY);
-    countryPicker.sortBy(DIALCODE);
-    countryPicker.sortBy(CODE);
-    countryPicker.sortBy(NONE);
+    countryPicker.sortBy(CountryPicker.Sort.COUNTRY);
+    countryPicker.sortBy(CountryPicker.Sort.DIALCODE);
+    countryPicker.sortBy(CountryPicker.Sort.CODE);
+    countryPicker.sortBy(CountryPicker.Sort.NONE);
 ```
 
 ### View type
 - DIALOG
 - BOTTOMSHEET
 ```JAVA
-    countryPicker.setViewType(DIALOG);
-    countryPicker.setViewType(BOTTOMSHEET);
+    countryPicker.setViewType(CountryPicker.ViewType.DIALOG);
+    countryPicker.setViewType(CountryPicker.ViewType.BOTTOMSHEET);
 ```
 
 ### Language

@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText mEditTextPreselectedCountry;
     private EditText mEditTextExceptCountries;
     private EditText mEditTextWantedCountries;
+    CountryPicker countryPicker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,18 +54,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void display() {
-
-        CountryPicker countryPicker = new CountryPicker.Builder(this).showingDialCode(mSwitchDialCodes.isChecked())
-                .setLocale(new Locale(mSpinnerLocale.getSelectedItem().toString())).showingFlag(mSwitchFlags.isChecked())
-                .sortBy(CountryPicker.Sort.valueOf(mSpinnerSort.getSelectedItem().toString())).setPreSelectedCountry(mEditTextPreselectedCountry.getText().toString())
-                .setViewType(CountryPicker.ViewType.valueOf(mSpinnerViewType.getSelectedItem().toString())).enablingSearch(mSwitchSearch.isChecked())
-                .setCountries(mEditTextWantedCountries.getText().toString().length() > 0 ? Arrays.asList(mEditTextWantedCountries.getText().toString().split(",")) : null)
-                .exceptCountriesName(Arrays.asList(mEditTextExceptCountries.getText().toString().trim().split(",")))
-                .setCountrySelectionListener(country -> Toast.makeText(this, "Selected Country: " + country.getName(), Toast.LENGTH_LONG).show())
-                .setStyle(getResources().getIdentifier(mSpinnerStyle.getSelectedItem().toString(), "style", getPackageName()))
-                .enableAutoDetectCountry(CountryPicker.DetectionMethod.valueOf(mSpinnerDetectionMethod.getSelectedItem().toString())
-                        , country -> Toast.makeText(this, "Detected Country: " + country.getName(), Toast.LENGTH_LONG).show())
-                .build();
+        if (countryPicker == null) {
+            countryPicker = new CountryPicker.Builder(this).showingDialCode(mSwitchDialCodes.isChecked())
+                    .setLocale(new Locale(mSpinnerLocale.getSelectedItem().toString())).showingFlag(mSwitchFlags.isChecked())
+                    .sortBy(CountryPicker.Sort.valueOf(mSpinnerSort.getSelectedItem().toString())).setPreSelectedCountry(mEditTextPreselectedCountry.getText().toString())
+                    .setViewType(CountryPicker.ViewType.valueOf(mSpinnerViewType.getSelectedItem().toString())).enablingSearch(mSwitchSearch.isChecked())
+                    .setCountries(mEditTextWantedCountries.getText().toString().length() > 0 ? Arrays.asList(mEditTextWantedCountries.getText().toString().split(",")) : null)
+                    .exceptCountriesName(Arrays.asList(mEditTextExceptCountries.getText().toString().trim().split(",")))
+                    .setCountrySelectionListener(country -> Toast.makeText(this, "Selected Country: " + country.getName(), Toast.LENGTH_LONG).show())
+                    .setStyle(getResources().getIdentifier(mSpinnerStyle.getSelectedItem().toString(), "style", getPackageName()))
+                    .enableAutoDetectCountry(CountryPicker.DetectionMethod.valueOf(mSpinnerDetectionMethod.getSelectedItem().toString())
+                            , country -> Toast.makeText(this, "Detected Country: " + country.getName(), Toast.LENGTH_LONG).show())
+                    .build();
+        }
         countryPicker.show(this);
     }
 }

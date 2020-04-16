@@ -4,8 +4,9 @@ import android.view.View;
 
 interface BaseView {
 
-    void showView(View view);
+    void setView(View view);
 
     void dismissView();
 
+    void showView();
 }

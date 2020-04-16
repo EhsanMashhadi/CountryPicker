@@ -242,9 +242,11 @@ public class CountryPicker implements CountryPickerContractor.View {
 
     public void show(AppCompatActivity activity) {
 
-        mBaseView = ViewFactory.create(mViewType, activity);
-        mBaseView.showView(mView);
-
+        if (mBaseView == null) {
+            mBaseView = ViewFactory.create(mViewType, activity);
+            mBaseView.setView(mView);
+        }
+        mBaseView.showView();
     }
 
     public void dismiss() {

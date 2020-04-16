@@ -5,22 +5,22 @@ import android.view.View;
 
 import androidx.annotation.NonNull;
 
-class MyDialog extends android.app.Dialog implements BaseView {
+import com.ehsanmashhadi.library.R;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
-    MyDialog(@NonNull Context context) {
+public class MyBottomSheetDialog extends BottomSheetDialog implements BaseView {
 
-        super(context);
+    public MyBottomSheetDialog(@NonNull Context context) {
+        super(context, R.style.BottomSheetDialog);
     }
 
     @Override
     public void setView(View view) {
-        this.setContentView(view);
+        setContentView(view);
     }
-
 
     @Override
     public void dismissView() {
-
         this.dismiss();
     }
 

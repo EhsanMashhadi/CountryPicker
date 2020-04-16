@@ -12,9 +12,8 @@ class ViewFactory {
                 return new MyDialog(activity);
 
             case BOTTOMSHEET:
-                BottomSheetFragment bottomSheetFragment = new BottomSheetFragment();
-                bottomSheetFragment.setActivity(activity);
-                return bottomSheetFragment;
+                MyBottomSheetDialog bottomSheetDialog = new MyBottomSheetDialog(activity);
+                return bottomSheetDialog;
 
             default:
                 return null;
